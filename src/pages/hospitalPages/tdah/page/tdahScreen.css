@@ -1,0 +1,220 @@
+.tdah #page {
+    background-color: var(--global-background);
+    color: white;
+    display: flex;
+    cursor: default;
+    max-width: 100%;
+    
+}
+
+.tdah #section-container {
+    scroll-snap-type: both mandatory;
+    justify-content: center;
+}
+
+.tdah #section-container > section {
+    scroll-snap-align: center;
+}
+
+.tdah .tdah-title-container {
+    position: relative;
+    z-index: 20;
+}
+
+.tdah .tdah-title {
+    text-align: center;
+    font-family: 'tungsten';
+    font-size: 180px;
+    letter-spacing: 15px;
+    text-align: center;
+
+    color: white;
+    background-color: transparent;
+    border: 0px;
+
+    transition: all 0.35s ease-in-out;
+}
+
+.tdah .tdah-title:hover {
+    margin-top: -5px;
+    letter-spacing: 40px;
+    font-size: 210px;
+}
+
+.tdah .tdah-title-container:hover + .subtitle {
+    margin-top: 10px;
+}
+
+.tdah .inicio {
+    align-items: center;
+}
+
+.tdah .subtitle {
+    margin-top: -35px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;    
+
+    transition: margin-top 0.35s ease-in-out;
+
+    z-index: 20;
+}
+
+.tdah .info-text {
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    font-size: 18px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 1px dotted white;
+    
+    box-shadow: 0px 25px 44px -20px rgba(255,255,255,0.28);
+}
+
+.tdah b {
+    font-size: 125%;
+}
+
+.tdah .pregunta {
+    letter-spacing: 1px;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+    font-style: italic;
+}
+
+.tdah .caracteristicas {
+    margin-left: 0;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 25px;
+}
+
+.tdah .explicacion {
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+.tdah .dato {
+    text-align: center;
+    list-style: inside;
+    margin-top: 10vh;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    width: auto;
+    position: relative;
+
+    border: 6px solid var(--global-background);
+    transition: all 0.25s ease-out;
+}
+
+.tdah .explicacion ul li {
+    transition: all 0.2s ease-out;
+}
+
+.tdah .explicacion ul li:hover {
+    letter-spacing: 1px;
+    color: rgb(216, 225, 255);
+}
+
+.tdah .explicacion a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.25s ease-out;
+}
+
+.tdah .explicacion a:hover {
+    color: #6c468f;
+}
+
+.tdah .dato:hover {
+    border-color: var(--nigger-color);
+}
+
+.tdah .footertext {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.tdah-popup-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-family: 'Railway', sans-serif;
+    z-index: 151;
+}
+.tdah-popup {
+    position: fixed;
+    width: 16vw;
+    height: 22vh;
+    margin: 0;
+}
+.tdah-popup-inner {
+    margin: 0;
+    color: black;
+    background-color: transparent;
+    pointer-events: all;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.65);
+    transition: all 0.325s ease-out;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.tdah-popup-inner:hover {
+    transform-origin: center;
+    transform: scale(1.1);
+    border-color: black;
+    opacity: 1;
+}
+
+.tdah .gif:hover {
+    opacity: 0.9;
+}
+
+.tdah .gif {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 15px 10px rgba(0, 0, 0, 1);
+    transition: all 0.25s ease-out;
+    
+}
+
+.esperoqande{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.tdah .randomletters{
+    position: fixed;
+    font-family: 'Raleway', sans-serif;    
+    content: "";
+    font-size: 0.2em;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 400ms;
+    mask-image: radial-gradient( calc(500px * 0.8) circle at var(--x) var(--y), rgb(255, 255, 255) 20%, rgb(255 255 255 / 25%), transparent );;
+    -webkit-mask-image: radial-gradient( calc(500px * 0.8) circle at var(--x) var(--y), rgb(255, 255, 255) 20%, rgb(255 255 255 / 25%), transparent );
+    scale: 1.03;
+    overflow: hidden;
+    transition: opacity 1s;
+}
+
+.tdah .randomletters:hover {
+    opacity: 0.1;
+}
+

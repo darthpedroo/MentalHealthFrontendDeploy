@@ -1,0 +1,116 @@
+.ansiedad{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--global-background);
+    color: white;
+    font-family: "Raleway", sans-serif;
+    align-items: center;
+    overflow: hidden;
+}
+.main{  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid rgb(104, 104, 104);
+    margin: 20px;
+    align-items: center;
+   
+}
+.flexBox2{
+    display: flex;
+    width: 100%;
+    border: 0;
+    border-top: 1px;
+    border-style: solid;
+    border-color: rgb(104, 104, 104);
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexBoxContainer .title{
+    font-size:  calc(1em + 0.4vw);
+    font-weight: bold;  
+    font-family: "Raleway", sans-serif;
+    margin-top: 20px;
+}
+.text{
+    display: flex;
+    font-size: calc(1em + 0.5vw);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+ 
+    margin: 10px 10px 20px;
+}
+
+.main ul{ 
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    
+}
+
+.main li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(0.3em + 0.5vw);
+    margin: 5px;
+}
+.bigger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(1em + 0.5vw);
+    margin: 5px;
+}
+
+.title{
+    margin-top: 80px;
+    font-size: calc(2em + 3vw);
+    font-family: 'tungsten';
+
+}
+
+
+
+
+.big{
+    font-size: 1.3em;
+}
+.flexBoxContainer{
+    display: flex;
+    width: 95%;
+    height: 71%;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.footer {
+    margin-top: 15vh;
+}
+
+.flexBox2 a {
+    color: rgb(0, 225, 255);
+
+}
+.flexBox2 a:hover {
+    text-decoration: underline;
+
+}
+.centerFlexbox{
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}

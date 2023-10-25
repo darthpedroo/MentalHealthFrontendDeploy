@@ -1,0 +1,46 @@
+
+.post-comments {
+    max-width: 80px;
+    display: flex;
+    position: relative;
+
+    align-items: center;
+  }
+
+  .post-comments .comments-number-container {
+    flex-grow: 1;
+    margin-right: 20%;
+  }
+
+  .comments-number-container .comments-number {
+    font-family: 'calibre';
+    text-align: center;
+    color: var(--clr-white)
+  }
+
+  .post-comments .comments-icon-container {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+
+  .post-comments.pressed > .comments-icon-container .comments-icon {
+    cursor: pointer;
+    background-position: right;
+  }
+
+
+
+  .material-symbols-outlined.comments-icon {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+
+    color: var(--clr-grey)
+  }

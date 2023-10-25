@@ -1,0 +1,307 @@
+#LoginScreen {
+    height: 100vh;
+    background-color: var(--global-background);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#LoginScreen .login-container {
+    width: 85%;
+    max-width: 700px;
+    height: 450px;
+
+    position: relative;
+
+    transform: translateY(-45px);
+}
+
+.login-container .title-container {
+    width: 100%;
+    height: 90px;
+    background-color: var(--global-background);
+    
+    position: relative;
+    z-index: 50;
+}
+
+.title-container .title {
+    font-family: 'tungsten';
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 6px;
+    word-spacing: 15px;
+    color: var(--login-default);
+}
+
+.login-container .form-container {
+    height: 360px;
+    border: 2.5px solid white
+}
+
+.form-container .form-box {
+    height: 100%;
+
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-box .form-title {
+    position: relative;
+    bottom: 0;
+
+    height: 20%;
+
+    display: flex;
+    align-items: flex-end;
+
+    transition: bottom 1s;
+}
+
+.form-box .form-title h2 {
+    font-family: "Anek Telugu";
+    letter-spacing: 4px;
+    word-spacing: 5px;
+
+    color: var(--login-default);
+    font-weight: 100;
+}
+
+.form-box .input-container {
+    height: 70%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font-family: "Anek Telugu";
+}
+
+.input-container .input {
+    position: relative;
+    width: 70%;
+}
+
+.input .input-text {
+    position: relative;
+    width: 100%;
+    height: 30px;
+
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--login-default);
+
+
+    font-family: "Anek Telugu";
+    font-size: 17px;
+    text-align: center;
+    color: var(--login-default);
+
+    transition: border-bottom 1s;
+
+    z-index: 50;
+}
+
+.input .red-border {
+    border-bottom: 2px solid var(--login-error);
+}
+
+.input .input-tag {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: var(--login-placeholder);
+
+    transition: all .6s ease;
+    z-index: 25;
+}
+
+.input .input-icon {
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+}
+
+.password-input .eye-icon {
+    width: 25px;
+    height: 25px;
+
+    left: calc(100% - 30px);
+    bottom: 5px;
+
+    z-index: 100;
+}
+
+.password-input .eye-icon:hover {cursor: pointer;}
+
+.input-container .password-input-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.password-input-container .inputinput {
+    width: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.password-input-container .email-input {
+    position: absolute;
+    opacity: 0;
+    transition: all 1.5s ease .3s;
+}
+
+.password-input-container .password-input {
+    transition: all 1.5s ease .3s;
+}
+
+.password-input-container .text-container {
+    position: relative;
+    top: 25px;
+
+    transition: top 1s ease .2s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-container .text-question {
+    color: var(--login-default);
+    font-size: 15px;
+    margin: 0;
+}
+
+.text-container .text-button {
+    color: var(--login-text);
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 15px;
+
+    transition: all .7s;
+}
+
+.text-container .text-button:hover {
+    color: var(--login-textHover);
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.form-box .error-container {
+    position: absolute;
+    bottom: 0; /* 27.5: half height of button */
+
+    transition: bottom 1s ease;
+}
+
+.error-container .error-text {
+    font-family: "Anek Telugu";
+    color: var(--login-error);
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.form-box .button-container {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.form-box .button-container {
+    width: 45%;
+    height: 55px;
+    position: absolute;
+    bottom: -27.5px;
+
+    border: 2.5px solid var(--login-default);
+    background-color: var(--global-background);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container .form-button {
+    width: calc(100% - 7px);
+    height: calc(100% - 7px);
+
+    outline: none;
+    border: none;
+
+    background-color: var(--login-button);
+    box-shadow: inset 0 0 var(--login-buttonHover);
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: var(--login-buttonText);
+
+    transition: all .8s ease;
+}
+
+
+.button-container .form-button:hover {
+    box-shadow: inset 400px 0 var(--login-buttonHover);
+    cursor: pointer;
+
+    letter-spacing: 15px;
+    color: var(--login-buttonTextHover);
+
+    width: 100%;
+    height: 100%;
+}
+
+/* REGISTER ANIMATION.  CLASSES ADDED BY JAVASCRIPT */
+
+.password-input-container .register-password {
+    transform: translateX(75%);
+}
+
+.password-input-container .register-email {
+    transform: translateX(-45%);    
+    width: 90%;
+    opacity: 1;
+}
+
+.form-box .title-animation {
+    bottom: 20%;
+}
+
+.password-input-container .animation-out {
+    top: 150%
+}
+
+/* REGISTER ANIMATION.  CLASSES ADDED BY JAVASCRIPT */
+
+
+
+/* PLACEHOLDER ANIMATION */
+.input-container .input .input-text-writen,
+.input-container .input .input-text:focus + .input-tag { /* .placeholder-disabled */
+    bottom: -20px;
+    font-size: 13px;
+}
+
+/* PLACEHOLDER ANIMATION */

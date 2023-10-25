@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+/* FiraCode && Roboto Mono && Philosopher*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+/* Cinzel */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Nabla&family=Paytone+One&display=swap');
+/* Nabla && Paytone One */
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Anek+Telugu:wght@500&family=Poppins:wght@100;200;300;400;500&display=swap');
+/* Anek Telugu && Poppins && Aboreto */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* Raleway */
+
+@font-face {
+    font-family: 'tungsten'; /* For titles */
+    src: local('tungsten'), url(../fonts/TungstenNarrow-Black.woff2) format('woff');
+}
+
+@font-face {
+    font-family: 'calibre';
+    src: url(../fonts/Calibre-Semibold.woff2) format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

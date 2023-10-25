@@ -1,0 +1,29 @@
+.profile_pic_container {
+  width: 40px;
+  height: 40px;
+}
+
+.author_date_container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .post_author {
+    font-size: 11px;
+    color: var(--clr-white); 
+    text-decoration: none;
+  }
+
+  .separation_dot {
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--clr-grey);
+    border-radius: 50%;
+  }
+
+  .post_date {
+    font-size: 16px;
+    color: var(--clr-grey); 
+  }

@@ -1,0 +1,192 @@
+.ActivateChatBotButton{
+    position: fixed;
+    height: 75px;
+    width: 75px;
+    top: 88%;
+    left: 94%;
+    border-radius: 50%;
+    border: 0;
+    background-image: url(../../assets/images/hospital/icon.png);
+    background-size: contain;
+    cursor: pointer;
+    transition: all 1s;
+    transform-origin: center;
+}
+
+.ActivateChatBotButton:hover{
+    transform: scale(1.1);
+}
+
+.chatbotmain{
+    position: fixed;
+    bottom: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    height: 75vh;
+    width: 30vw;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: rgb(109, 109, 109) 1px solid;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid white;
+    height: 20%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.chatbotbutton{
+    font-family: 'Raleway', sans-serif;
+    font-size: calc(1em + 0.01vw);
+    border: 1px white solid;
+    background: none;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.chatbotbutton:hover{
+    box-shadow: 0 0 10px rgb(255, 255, 255); 
+}
+
+.chatbox{
+    display: flex;
+    flex-direction: column;
+    max-height: 80%;
+    height: 80%;
+    margin: 0px 30px 0 0;
+    width: 100%;   
+}
+
+.messagebox{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 0.2s;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: white 1px solid;
+
+}
+
+.title img{
+    margin: 10px;
+}
+
+.messagecontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    word-wrap: break-word;
+    margin: 10px 10px;
+}
+
+.messagecontainer img{
+    margin: 10px 10px 0 10px;
+    
+}
+
+.userMessage{
+    justify-content: flex-end;
+}
+
+.botMessage{
+    color: aliceblue;
+}
+
+.messages{
+    margin: 1vh 0;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid white;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: auto;
+}  
+
+.evenMessage{
+    color: red;
+    text-align: right;
+    align-self: flex-end;
+    border-bottom-left-radius: 15px;
+}
+
+.oddMessage{
+    color: aqua;
+    border-bottom-right-radius: 15px;
+}
+
+.sender{
+    color: white;
+}
+
+.activecircle{
+    border-radius: 50%;
+    background-color: rgb(3, 212, 3);
+    width: 15px;
+    height: 15px;
+
+
+}
+
+.botinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    height: 100%;
+}
+
+.statuscontainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    align-items: flex-end;
+    width: 70px;
+    gap: 5px;
+}
+
+.status{
+    font-size: small;
+    color: white;
+    font-weight: normal;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}

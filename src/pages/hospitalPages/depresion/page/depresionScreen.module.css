@@ -1,0 +1,95 @@
+
+.page{
+    background-color: var(--global-background);
+    
+}
+
+.mainPage{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    cursor: none;
+    
+}
+
+
+
+
+.depresionBox{
+    display: flex;
+    flex-direction: column;
+    width: 99.5vw;
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+.depresionInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.container{ 
+    display: flex;
+    justify-content:left;
+    flex-direction: column;
+    align-items: center;    
+    margin: 60px;    
+    width: 82vw;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: #212120;
+    z-index: 1;
+}
+
+.container h1{
+    margin: 20px;
+    z-index: 1;
+}
+.container ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap-reverse;
+    width: 90%;
+    margin: calc(2vh);
+    z-index: 1;
+}
+
+.container ul li, .container p{
+    font-size: calc(.5em + .5vw);
+    margin: calc(.25em + .25vh);
+    line-height: 25px;
+    list-style-position: inside;
+    z-index: 1;
+}
+
+.readMore{
+    padding-top: 10px; 
+    border: 0;
+    color: rgb(9, 255, 234);
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    background-color: transparent;  
+    z-index: 1;
+    
+}
+
+
+.ayuda ul{
+    align-items: center;
+    gap: calc(.6em + .6vw);
+    z-index: 1;
+}
+
+
+.depresionText{
+    font-size: calc(1em + 1vw);
+    background-color: transparent;
+    z-index: 1;
+}

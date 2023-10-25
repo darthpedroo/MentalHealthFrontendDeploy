@@ -1,0 +1,236 @@
+@keyframes arrow {
+    10% {
+      transform: translateY(-20px);
+    }
+  
+    35% {
+      transform: translateY(200px);
+      opacity: 0;
+    }
+  
+    80% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+  
+  #cabeza {
+    position: relative;
+    top: 0;
+  }
+  
+  #cabeza .background::after,
+  #cabeza .background::before {
+    content: '';
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+  }
+  
+  #cabeza .background::after {
+    background-color: var(--main-header);
+    top: -85px;
+    left: 0;
+  }
+  
+  #cabeza .background::before {
+    background-image: linear-gradient(
+      90deg,
+      black 20%,
+      white 50%,
+      black 80%
+    );
+    top: -85px;
+    left: 0;
+  }
+  
+  #page {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--global-background);
+    align-items: center;
+    position: relative;
+  }
+  
+  #page #title {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 75;
+  }
+  
+  #page #title .text {
+    position: fixed;
+    text-align: center;
+    font-size: 115px;
+  }
+  
+  #page #title .text h1 {
+    font-family: 'tungsten';
+    letter-spacing: 8px;
+    word-spacing: 35px;
+    font-weight: 100;
+    color: var(--main-title);
+    margin: auto;
+  }
+  
+  #page #title .arrow-container {
+    position: fixed;
+    bottom: 10%;
+  }
+  
+  #page #title .arrow {
+    position: relative;
+    width: 50px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    animation: arrow 4s none infinite;
+  }
+  
+  #page #title .a2 {
+    animation-delay: 0.05s;
+  }
+  
+  #page #title .a1 {
+    animation-delay: 0.1s;
+  }
+  
+  #page #title .arrow::before,
+  #page #title .arrow::after {
+    content: '';
+    width: 6px;
+    height: 35px;
+    background-color: var(--clr-white);
+    position: relative;
+  }
+  
+  #page #title .arrow::before {
+    transform: rotate(-45deg);
+  }
+  
+  #page #title .arrow::after {
+    transform: rotate(45deg);
+  }
+  
+  #page #desc {
+    width: 60%;
+    max-width: 500px;
+
+    z-index: 25;
+  }
+  
+  #page #desc .title {
+    color: var(--clr-grey);
+    text-align: center;
+    font-family: 'calibre';
+    height: 12px;
+    letter-spacing: 10px;
+    opacity: 0.5;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #page #desc .text {
+    border: 2px solid var(--main-borders);
+    border-radius: 10px;
+    padding: 30px 17px 30px 17px;
+    background-color: var(--global-background);
+  }
+
+  #desc .text p {
+    font-family: 'calibre';
+    font-size: 25px;
+    opacity: .8;
+    color: var(--main-descFont);
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  #page #button {
+    width: 60%;
+    max-width: 500px;
+    z-index: 25;
+  }
+  
+  #page #button .buttonContainer {
+    margin-top: 40%;
+  }
+  
+  #page #button .StartButton {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--main-borders);
+    box-shadow: 0 0 0 0 var(--main-button);
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    color: var(--clr-white);
+    font-weight: bold;
+    letter-spacing: 0;
+    word-spacing: 0;
+    transition: all 0.5s ease 0.1s;
+    z-index: 100;
+  }
+  
+  #page #button .StartButton::before {
+    content: '';
+    width: 0;
+    height: 60px;
+    background-color: var(--main-button);
+    position: absolute;
+    top: -2px;
+    left: 0;
+    transition: width 0.5s ease 0s;
+    z-index: -1;
+  }
+  
+  #page #button .StartButton span {
+    z-index: 100;
+  }
+  
+  #page #button .StartButton:hover::before {
+    width: 100%;
+  }
+  
+  #page #button .StartButton:hover {
+    color: var(--global-background);
+    letter-spacing: 3.5px;
+    word-spacing: 3px;
+    cursor: pointer;
+    box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.178), 0 0 80px 0 rgba(255, 255, 255, 0.247);
+  }
+  
+  #page #footer {
+    margin-top: 15%;
+    margin-bottom: 2%;
+    height: 125%;
+    text-align: center;
+    color: var(--clr-grey);
+    opacity: 0.5;
+  }
+  
+  #page #footer .title {
+    font-size: 15px;
+    font-family: 'SFmono';
+    margin-bottom: 10px;
+    z-index: 25;
+  }
+  
+  #page #footer .members {
+    font-family: 'Cinzel';
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    z-index: 25;
+  }

@@ -1,0 +1,164 @@
+#HospitalHeader {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: -80px;
+
+  transition: top 1s;
+
+  z-index: 150;
+}
+
+#HospitalHeader .mobile {
+  display: none;
+}
+
+#HospitalHeader .hospital-header {
+    /* Generic changes */
+    width: 100%;
+    height: 80px;
+    position: relative;
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--header-border);
+  }
+  
+  #HospitalHeader .hospital-header .header-list {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  #HospitalHeader .hospital-header .header-list .element {
+    text-align: center;
+  }
+  
+  #HospitalHeader .hospital-header .header-list .header-option { 
+    font-family: 'Paytone One';
+    font-size: 20px;
+    font-weight: 100;
+    text-decoration: none;
+    text-shadow: 0 0 0 transparent;
+    color: var(--global-font);
+    opacity: .8;
+    transition: all .5s ease 0s;
+  }   
+  
+  #HospitalHeader .hospital-header .header-list .hoverEffect {
+    &:hover {
+      color: var(--hover-color);
+      text-shadow: 0 0 50px var(--hover-color);
+    }
+  }
+  
+  #HospitalHeader .hospital-header .header-list .selector {
+    height: 3px;
+    width: 5%;
+    background-color: var(--header-selector);
+    position: absolute;
+    bottom: 0;
+    transition: left .6s ease;
+  }
+  
+  /* Specific changes */
+  
+  #HospitalHeader .main-header {
+    /* Contiene:    logo / title  --- problemas --- frases --- blog */ 
+    z-index: 55;
+  }
+  
+  #HospitalHeader .main-header .title-element {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  #HospitalHeader .main-header .title-element .img-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #HospitalHeader .main-header .title-element .img-container .logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  #HospitalHeader .main-header .title-element .header-title {
+    font-size: 30px;
+  }
+  
+  #HospitalHeader .problems-header {
+    /* Contiene todos los problemas  (depresión - TDAH - trauma - bullying - estrés) */ 
+    position: fixed;
+    top: -80px;
+    left: 0;
+    transition: top .8s ease;
+    z-index: 50;
+  }
+  
+  #HospitalHeader .problems-header .element {
+    width: 20%;
+  }
+  
+  #HospitalHeader .problems-header .header-list .header-option {
+    font-size: 25px;
+  }
+  
+  #HospitalHeader .problems-header-on-hover {
+    top: 80px;
+  }
+ 
+
+
+  a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (max-width: 800px) {
+  #HospitalHeader .hospital-header .header-list .header-option {
+    font-size: 17px;
+  }
+
+  #HospitalHeader .main-header .title-element .header-title {
+    font-size: 25px;
+  }
+
+  #HospitalHeader .main-header .title-element {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  #HospitalHeader .main-header .main-option {
+      display: none;
+  }
+
+  #HospitalHeader .mobile {
+    display: inline-block;
+  }
+
+  #HospitalHeader .selector {
+    display: none;
+  }
+
+  #HospitalHeader .mobile-element {
+    width: 30px;
+    height: 30px;
+  }
+
+  #HospitalHeader .mobile-icon {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .mobile-container-option {display: none;}
+}

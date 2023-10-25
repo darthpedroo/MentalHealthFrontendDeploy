@@ -1,0 +1,171 @@
+:root {
+    
+    /* MAIN COLORS */
+    --clr-white: white;
+    --clr-grey: #818181;
+    --clr-darkgrey: #505050;
+    --clr-darkergrey: #303030;
+    --clr-darkgreen: #182518;
+    --clr-darkbrown: #2E282A;
+    --clr-dark: #161616;
+    --clr-black: black;
+
+    --clr-green: #46bb4e;
+    --clr-yellow: #000000;
+    --clr-blue: #1a73e8;
+    --clr-red: red;
+    /* MAIN COLORS */
+
+
+
+    /* PAGES COLORS */
+
+
+    /* GLOBAL STRUCTURES */
+    --global-background: var(--clr-dark);
+    --global-font: var(--clr-white);
+    /* GLOBAL STRUCTURES */
+
+
+    /* MainScreen STRUCTURES */
+    --main-title: var(--clr-white);
+    --main-button: var(--clr-white);
+    --main-borders:  var(--clr-white);
+    --main-descFont: var(--clr-white);
+    --main-header: var(--clr-darkbrown);
+    --main-particle: var(--clr-white);
+    /* MainScreen STRUCTURES */
+
+
+
+
+    /* ProfileScreen STRUCTURES */ 
+    --user-sidebar-background: #302e2e30; /*--user-primary con opacidad: 30% */
+    --user-sidebar-button: #252525;
+    --user-sidebar-button-hover: #404040;
+    --user-line: #666565;
+    --user-primary: #302E2E;
+    --user-secondary: var(--clr-white);
+    --user-font: var(--global-font);
+    --user-input-error: var(--clr-red);
+    --user-popup-background: #161616da;
+
+    --user-mobile-bg: #252525;
+    --user-mobile-border: white;
+    /* ProfileScreen STRUCTURES */ 
+
+
+
+    /* DepresionScreen STRUCTURES */
+
+    /* DepresionScreen STRUCTURES */
+
+
+    /* TdahScreen STRUCTURES */
+    --nigger-color: rgb(29, 29, 29);
+
+    /* TdahScreen STRUCTURES */
+
+
+    /* BlogScreen STRUCTURES */
+    --blog-post: var(--clr-dark);
+    --blog-postHover: rgb(51, 49, 49);
+    --blog-buttonHover: rgb(68, 66, 66);
+    --blog-box: #2f2f2f;
+    /* BlogScreen STRUCTURES */
+
+    /* PostScreen STRUCTURES */
+    --post-background: #222222;
+    --post-line: var(--clr-white);
+    --post-comment-section: #404040;
+    --post-comment-input: #303030;
+    --post-comment-button: #6B6B6B;
+    --post-comment-button-text: var(--clr-white);
+    --post-comment-button-shadow: rgb(0, 0, 0);
+    --post-comment-button-hover: #505050;
+    /* PostScreen STRUCTURES */
+
+
+    /* LoginScreen STRUCTURES */
+    --login-default: var(--clr-white);
+    --login-placeholder: var(--clr-grey); /* text on input before writing */
+    --login-button: var(--clr-white);
+    --login-buttonHover: var(--clr-black);
+    --login-buttonText: var(--clr-black);
+    --login-buttonTextHover: var(--clr-white);
+    --login-text: var(--clr-blue);
+    --login-textHover: var(--clr-yellow);
+    --login-error: var(--clr-red);
+    /* LoginScreen STRUCTURES */
+
+
+
+    /* SubmitScreen STRUCTURES */
+    --submit-background: #302e2e;
+    --submit-button: #348f3a;
+    --submit-button-hover: #3fa546;
+    --submit-post: #252525;
+    --submit-border: #ABABAB;
+    --submit-input: var(--global-background);
+    --submit-border-focus: var(--clr-blue);
+    --submit-number: var(--global-background);
+    /* SubmitScreen STRUCTURES */
+
+
+
+    /* PAGES COLORS */
+
+
+    
+    /* COMPONENTS COLORS */
+
+
+
+    /* ParticleGenerator COLORS */
+    --particle-color: var(--clr-white);
+    /* ParticleGenerator COLORS */
+
+    /* HospitalHeader COLORS */
+    --header-bg: rgb(20, 25, 29);
+    --header-border: var(--clr-grey);
+    --header-selector: var(--clr-grey);
+    /* HospitalHeader COLORS */
+
+
+    /* ShowProfile COLORS */
+    --show-profile-container: var(--clr-dark);
+    --show-profile-container-hover: rgb(51, 49, 49);
+    --show-profile-shadow: rgba(0, 0, 0, 0.432);
+    --show-username: var(--clr-white);
+    /* ShowProfile COLORS */
+
+
+
+
+    /* UploadImage COLORS */
+    --upload-background: var(--user-primary);
+    --upload-button: var(--clr-green);
+    --upload-button-shadow: rgba(0, 0, 0, 0.307);
+    --upload-cross-hover: rgba(255, 0, 0, 0.502);
+    /* UploadImage COLORS */
+
+
+    /* DotPattern VARIABLES */  
+    --dot-background: var(--global-background);
+    --dot-color: var(--clr-white);
+    --dot-size: 1px;
+    --dot-space: 22px; 
+
+    /* COPY THIS LINE OF CODE
+        background: 
+        linear-gradient(90deg, var(--dot-background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
+    */
+
+    /* DotPattern VARIABLES */
+
+
+
+    /* COMPONENTS COLORS */
+
+}

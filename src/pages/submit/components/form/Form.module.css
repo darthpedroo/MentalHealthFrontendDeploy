@@ -1,0 +1,254 @@
+.page {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: 
+  linear-gradient(90deg, var(--dot-background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+  linear-gradient(var(--dot-background) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space), var(--dot-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background-color: var(--submit-background);
+  border-radius: 10px;
+  padding:  50px;
+
+  transform: translateY(calc(80px / 2)); /* header height */
+}
+
+.submit_section {
+  width: 70%;
+}
+
+.submit_title_container {
+  width: 95%;
+  padding: 0 5px;
+  margin: 0 auto 20px auto;
+}
+
+.submit_title {
+  font-family: 'calibre';
+  font-size: 28px;
+  color: var(--global-font)
+}
+
+.submit_line {
+  height: 3px;
+  background-color: white;
+  opacity: .5;
+  border: none;
+}
+
+.submit_padding {
+  padding-left: 10px;
+}
+
+.submit_container_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.submit_container {
+  width: 95%;
+
+  background-color: var(--submit-post);
+  border-radius: 6px;
+  border: 1px solid var(--submit-border);
+
+  position: relative;
+}
+
+.picture_container {
+  width: 40px;
+  height: 40px;
+
+  position: absolute;
+  top: 0;
+  left: calc(-40px + -15px);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 50px;
+}
+
+.input_container {
+  width: 100%;
+  height: 35px;
+
+  margin-bottom: 30px;
+}
+
+.input {
+  width: 100%;
+  height: inherit;
+
+  border: 0px solid var(--submit-input);
+  outline: none;
+
+  background-color: var(--submit-input);
+  border-radius: 5px;
+  padding-left: 10px;
+
+  font-family: 'calibre';
+  font-size: 20px;
+  color: var(--global-font);
+
+  transition: border .4s; 
+}
+
+.input:focus {
+  border: 1px solid var(--submit-border-focus)
+}
+
+
+.textarea_container {
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  height: 250px;
+  max-height: 400px;
+
+  background-color: var(--submit-input);
+  border-radius: 5px;
+  padding: 3px 10px;
+
+  border: 0px solid var(--submit-input);
+  outline: none;
+  resize: none;
+
+  font-family: 'calibre';
+  font-size: 18px;
+  color: var(--global-font);
+
+  transition: border .4s;
+}
+
+.textarea::-webkit-scrollbar {
+  background-color: var(--global-background);
+  width: 3px;
+}
+
+.textarea:focus {
+  border: 1px solid var(--submit-border-focus);
+}
+
+.button_container {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  
+  background-color: var(--submit-button);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+
+  margin-top: 8px;
+  padding: 7px 18px;
+
+  font-family: 'calibre';
+  font-size: 16px;
+  color: var(--global-font);
+
+  transition: background-color .4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--submit-button-hover);
+}
+
+
+
+
+
+
+
+
+
+.rules_section {
+  flex-grow: 1;
+}
+
+.rules_background {
+  background-color: var(--submit-post);
+  border-radius: 10px;
+  border: 1px solid var(--submit-border);
+
+  padding: 20px;
+}
+
+.rule_title {
+  font-family: 'calibre';
+  font-size: 23px;
+  color: var(--global-font);
+
+  margin-bottom: 5px;
+}
+
+.rules_container {
+  width: 95%;
+  margin: 20px auto;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rule_element {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.number_container {
+  width: 35px;
+  height: 35px;
+
+  background-color: var(--submit-number);
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  font-family: 'calibre';
+  font-size: 23px;
+  color: var(--global-font)
+}
+
+.rule_text {
+  font-family: 'calibre';
+  font-size: 20px;
+  color: var(--global-font)
+}
+
+.rule_container_line {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  opacity: .5;
+}

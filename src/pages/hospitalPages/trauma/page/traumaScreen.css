@@ -1,0 +1,101 @@
+.trauma #page::before{
+    background-image: url('../../../../assets/images/hospital/trauma/miedo_a_los_negros.png');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0.02;
+}
+
+.trauma #page {
+    background-color: var(--global-background);
+}
+
+.trauma #pagebody {
+    width: 99vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+.trauma .main {
+    color: white;
+    text-align: center;
+}
+
+.trauma .main-title {
+    margin-top: 60px;
+    font-family: 'tungsten';
+    font-size: 150px;
+    letter-spacing: 4px;
+    transform: rotateX(35deg);
+    margin-bottom: -4vh;
+    transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trauma .under-title {
+    font-size: 25px;
+    letter-spacing: 1px;
+    z-index: 50;
+    margin-top: -4vh;
+    opacity: 0.125;
+    margin-bottom: 10vh;
+    transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trauma .under-title:hover {
+    font-size: 30px;
+    opacity: 0.2;
+}
+
+.trauma .main-subtitle {
+    font-size: 50px;
+    z-index: 50;
+    margin-top: 2vh;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.trauma .main-subtitle:hover {
+    letter-spacing: 0px;
+}
+
+.trauma .miedo {
+    opacity: 0.125;
+}
+
+.trauma .info-trauma {
+    margin-left: calc(50vw - 30vw);
+    width: 60vw;
+    margin-top: 3vh;
+    transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-width: 0px 1px 0px 1px;
+    list-style: inside;
+}
+
+.trauma .info-trauma:hover{
+    margin-left: calc(50vw - 65vw/2);
+    width: 65vw;
+    border: 1px solid rgba(255, 255, 255, 0.225);
+    border-width: 0px 2px 0px 2px;
+}
+
+.trauma .main-subtitle:hover {
+    color: #777777;
+    cursor: default;
+    letter-spacing: 2px;
+}
+
+.trauma .info-trauma ul li {
+    margin-bottom: 3vh;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.trauma .invisible {
+    opacity: 1;
+}

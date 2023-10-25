@@ -1,0 +1,96 @@
+.bullying #page {
+    background-color: var(--global-background);
+    width: 99.6vw;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.bullying .main .title {
+    font-size: 140px;
+    letter-spacing: 2px;
+    transform: rotateX(30deg);
+    font-family: 'tungsten';
+    margin-bottom: -25px;
+}
+
+.bullying .main .subtitle {
+    font-size: 40px;
+    font-style: italic;
+    opacity: 0.25;
+    margin-right: 15px;
+    margin-bottom: 5vh;
+}
+
+.bullying .info-bully {
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.bullying .info-bully .pregunta {
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 35px;
+    border: 0px solid rgba(255, 255, 255, 0);
+    transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bullying .info-bully .pregunta .pregunta-title {
+    margin-bottom: 10px;
+    font-size: 35px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bullying .info-bully .pregunta .pregunta-title:hover {
+    margin-top: -5px;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+.bullying .info-bully .pregunta .lista-bully {
+    list-style: inside;
+}
+
+.bullying .info-bully .pregunta:hover {
+    border-color: rgba(255, 255, 255, 0.225);
+    border-width: 0px 2px 0px 2px;
+    width: 100%;
+    margin-left: 0%;
+}
+
+.bullying .info-bully .pregunta .niggermaxxer {
+    margin-top: 4px;
+}
+
+.bullying a {
+    cursor: pointer;
+}
+
+.bullying .other {
+    margin-top: 5vh;
+}
+
+.bullying #bullying-footer {
+    opacity: 0.5;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    font-style: italic;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.bullying #bullying-footer:hover {
+    letter-spacing: 1px;
+}
+
+.bullying .leer-mas {
+    text-decoration: underline;
+    font-style: italic;
+    transition: all 0.75s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bullying .leer-mas:hover {
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #757AFF
+}

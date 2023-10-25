@@ -1,0 +1,134 @@
+.singlepost {
+    min-height: 80vh;
+    width: 80%;
+    max-width: 750px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.038);
+    background-color: var(--post-background);
+
+    margin: 30px 0;
+    padding: 20px;
+
+    font-family: 'calibre';
+    color: white;
+}
+
+.post_section {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.post_title {
+    font-size: 50px;
+}
+
+.post_text {
+  font-size: 25px;
+}
+
+.post_buttons {
+  width: 100%;
+  height: 25px;
+
+  margin: 20px 0;
+
+  display: flex;
+  gap: 35px;
+}
+
+.post_buttons div {
+  height: inherit;
+}
+
+.line {
+  margin: 25px 0 35px 0;
+  background-color: var(--post-line);
+}
+
+.comment_section {
+  width: 90%;
+
+  background-color: var(--post-comment-section);
+  border-radius: 10px;
+
+  margin: 0 auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.comment_form {
+  width: 100%;
+}
+
+.input_container {
+  position: relative;
+}
+
+.form_input {
+  width: 100%;
+  min-height: 8rem;
+
+  color: var(--clr-white);
+  background-color: var(--post-comment-input);
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 20px;
+
+  padding: 16px 0 15px 70px;
+
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.form_input::placeholder {
+  color: var(--clr-white);
+  opacity: .5;
+
+  font-family: inherit;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.profile_container {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  left: 15px;
+}
+
+.form_button {
+  width: 115px;
+  height: 28px;
+
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+
+  outline: none;
+  border: none;
+
+  background-color: var(--post-comment-button);
+  box-shadow: 0 0 0 0 var(--post-comment-button-shadow);
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 0;
+  color: var(--post-comment-button-text);
+
+  transition: all .3s;
+}
+
+.form_button:hover { 
+  background-color: var(--post-comment-button-hover);
+
+  cursor: pointer;
+}

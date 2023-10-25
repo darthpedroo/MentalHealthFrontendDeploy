@@ -1,0 +1,269 @@
+/* Hospital.module.css */
+
+.hospitalContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--global-background);
+  color: white;
+  padding-top: 80px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Banner */
+
+.banner {
+  display: flex;
+  height: 40vh;
+  background-size: cover;
+  background-color: rgb(39, 39, 39);
+}
+
+.banner img {
+  height: 40vh;
+  width: 30%;
+  margin-left: 20px;
+}
+
+.banner h1 {
+  margin-left: 60px;
+  margin-top: 30px;
+  font-size: calc(1.5em + 1.5vw);
+  margin-right: 100px;
+}
+
+.banner .ctaButton {
+  margin-left: 60px;
+  margin-top: 30px;
+  background: white;
+  box-shadow: 4px 4px white;
+  color: #1f1f1f;
+  text-transform: lowercase;
+  border: solid 2px #1f1f1f;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 18px 32px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  cursor: pointer;
+  overflow: hidden;
+  transition-delay: 0s !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px;
+}
+
+.banner .ctaButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #252525;
+  border: solid 3px white;
+  z-index: -1;
+  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.banner .ctaButton:hover::before {
+  width: 100%;
+  left: 0;
+  right: unset;
+}
+
+.banner .ctaButton:hover {
+  box-shadow: 0 0;
+  color: white;
+}
+
+/* Hospital Info */
+
+.hospitalInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  height: 300px;
+  gap: 40px;
+  margin: 20px;
+  border: 1px #fff solid;
+}
+
+.hospitalInfo .infoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.hospitalInfo p {
+  font-size: calc(1em + 0.5vw);
+}
+
+.hospitalInfo h1 {
+  font-size: calc(1.2em + 1.2vw);
+}
+
+/* Sedes */
+
+.locationWrapper {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.containerLocation {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: 300px;
+}
+
+.infoLocation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.containerLocation img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.barrio {
+  font-size: calc(0.75em + 0.75vw);
+  font-weight: bold;
+}
+
+.calle {
+  color: rgb(214, 214, 214);
+}
+
+.horario {
+  color: rgb(146, 146, 146);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Servicios */
+
+.servicesWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  background-color: #1f1f1f;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  height: 15vw;
+  width: 15vw;
+  margin: 0.5em;
+  background-color: rgb(22, 22, 22);
+  border: 1px solid white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  max-height: 75%;
+  max-width: 75%;
+}
+
+.servicio {
+  font-size: calc(0.5em + 0.5vw);
+}
+
+/* Footer */
+
+.description {
+  color: rgb(255, 255, 255);
+  background-color: rgb(49, 49, 49);
+}
+
+/* Flexbox container for rows */
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.column {
+  width: 20vw;
+}
+
+/* Style for individual columns (columns within each row) */
+
+.row {
+  padding: 10px;
+  text-align: left;
+}
+
+.row h3 {
+  font-size: calc(0.75em + 0.75vw);
+}
+
+.row h4 {
+  margin: 10px 0 0 5px;
+}
+
+/* Style for the links */
+
+.row a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  font-size: calc(0.5em + 0.75vw);
+}
+
+/* Style for the links on hover */
+
+.row a:hover {
+  text-decoration: underline;
+}
+
+.row p {
+  font-family: 'Raleway', sans-serif;
+  font-size: calc(0.5em + 0.75vw);
+  margin: 5px;
+  padding-left: 5px;
+}

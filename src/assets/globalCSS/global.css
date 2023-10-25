@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+        /* GLOBAL  SCROLL BAR  CHANGES */
+body::-webkit-scrollbar {
+    background-color: var(--global-background);
+    width: 5px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--clr-grey);
+    border-radius: 10px;
+}
+        /* GLOBAL  SCROLL BAR  CHANGES */
+
+
+::selection { /* Modifica el color de texto seleccionado */
+    background-color: var(--clr-darkgreen);
+    opacity: .1;
+}
+
+.overflow-disabled { /* this modify the body in 'index.html'*/
+    overflow-y: hidden;
+}
+
+.link {
+    text-decoration: none;
+}
