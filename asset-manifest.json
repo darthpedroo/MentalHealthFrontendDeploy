@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/MentalHealthFrontendDeploy/static/css/main.6b87dd90.css",
+    "main.js": "/MentalHealthFrontendDeploy/static/js/main.421dae29.js",
+    "static/media/minecraft1.gif": "/MentalHealthFrontendDeploy/static/media/minecraft1.f8a0388234b35f10fb7b.gif",
+    "static/media/minecraft2.gif": "/MentalHealthFrontendDeploy/static/media/minecraft2.d421e2b5dcd61c4b1569.gif",
+    "static/media/minecraft3.gif": "/MentalHealthFrontendDeploy/static/media/minecraft3.bb6c3913d545d394a4c5.gif",
+    "static/media/subwaysurferos.gif": "/MentalHealthFrontendDeploy/static/media/subwaysurferos.a0f593ab4b72b7624a8b.gif",
+    "static/media/locacion4.png": "/MentalHealthFrontendDeploy/static/media/locacion4.4c288a2ec76518001480.png",
+    "static/media/fondo2.png": "/MentalHealthFrontendDeploy/static/media/fondo2.258cf6ab15e547f32f6c.png",
+    "static/media/familyguy5.gif": "/MentalHealthFrontendDeploy/static/media/familyguy5.75db87c145c0715e4f22.gif",
+    "static/media/minecraft4.gif": "/MentalHealthFrontendDeploy/static/media/minecraft4.ddb75153f64769e3d823.gif",
+    "static/media/familyguy1.gif": "/MentalHealthFrontendDeploy/static/media/familyguy1.61e956a539416b3d5ec5.gif",
+    "static/media/locacion1.png": "/MentalHealthFrontendDeploy/static/media/locacion1.483fbae0924fd6fa5300.png",
+    "static/media/familyguy2.gif": "/MentalHealthFrontendDeploy/static/media/familyguy2.85f88178da4bb2160e1f.gif",
+    "static/media/familyguy3.gif": "/MentalHealthFrontendDeploy/static/media/familyguy3.fd11376220bbb01a99cc.gif",
+    "static/media/locacion2.png": "/MentalHealthFrontendDeploy/static/media/locacion2.5be6b477530b110e16e7.png",
+    "static/media/familyguy4.gif": "/MentalHealthFrontendDeploy/static/media/familyguy4.9fe338fefe238b7b966f.gif",
+    "static/media/locacion3.png": "/MentalHealthFrontendDeploy/static/media/locacion3.b653180a76d6f3834c88.png",
+    "static/media/logo.png": "/MentalHealthFrontendDeploy/static/media/logo.aa000438d485374ecc31.png",
+    "static/media/cama.png": "/MentalHealthFrontendDeploy/static/media/cama.33ac2888f1643e7c94a8.png",
+    "static/media/likeHeart.png": "/MentalHealthFrontendDeploy/static/media/likeHeart.6aa04f8169d9cccb2ca5.png",
+    "static/media/miedo_a_los_negros.png": "/MentalHealthFrontendDeploy/static/media/miedo_a_los_negros.a9e9b0df2c487e18285e.png",
+    "static/media/icon.png": "/MentalHealthFrontendDeploy/static/media/icon.5f86f945f1959a6689a7.png",
+    "static/media/Calibre-Semibold.woff2": "/MentalHealthFrontendDeploy/static/media/Calibre-Semibold.893dba2d97d3f2ef9366.woff2",
+    "static/media/TungstenNarrow-Black.woff2": "/MentalHealthFrontendDeploy/static/media/TungstenNarrow-Black.bc0c992c1f8edb56de7c.woff2",
+    "static/media/user.png": "/MentalHealthFrontendDeploy/static/media/user.b4731f83f98d2f247edd.png",
+    "static/media/loading.png": "/MentalHealthFrontendDeploy/static/media/loading.b0cf5b3b4d6aab355b28.png",
+    "index.html": "/MentalHealthFrontendDeploy/index.html",
+    "main.6b87dd90.css.map": "/MentalHealthFrontendDeploy/static/css/main.6b87dd90.css.map",
+    "main.421dae29.js.map": "/MentalHealthFrontendDeploy/static/js/main.421dae29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b87dd90.css",
+    "static/js/main.421dae29.js"
+  ]
+}
