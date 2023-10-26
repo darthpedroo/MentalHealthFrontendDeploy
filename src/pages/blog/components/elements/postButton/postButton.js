@@ -9,7 +9,7 @@ function PostButton({subtitle,header,link}){
 
         <div className={buttonStyle.post} id={buttonStyle.section}>
 
-        <Link className={`link ${buttonStyle.post_link}`} to={`http://localhost:3000/MentalHealthFrontendDeploy/${link}`}>
+        <Link className={`link ${buttonStyle.post_link}`} to={`https://darthpedroo.github.io/MentalHealthFrontendDeploy/MentalHealthFrontendDeploy/${link}`}>
         
 
             <div className={`${buttonStyle.title_container} ${buttonStyle.container}`}>

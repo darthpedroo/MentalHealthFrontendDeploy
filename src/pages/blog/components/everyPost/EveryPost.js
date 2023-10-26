@@ -101,7 +101,7 @@ function EveryPost({details , likes, className}) {
       {mergedData.map((output, id) => (
       <div key={id} className={postStyle.post}>
 
-        <Link className={`link ${postStyle.post_link}`} to={`http://localhost:3000/MentalHealthFrontendDeploy/blog/${output.id}`}>
+        <Link className={`link ${postStyle.post_link}`} to={`https://darthpedroo.github.io/MentalHealthFrontendDeploy/blog/${output.id}`}>
 
           <UserDetails messageType={"ParameterIsntWorking"} author={output.author_username} date={output.publishedDate} pkUser={output.idUser}></UserDetails>
             <div className={postStyle.title_container}>
