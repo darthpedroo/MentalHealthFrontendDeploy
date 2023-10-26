@@ -162,22 +162,22 @@ const UserPage = () => {
     }
 
     const EditInput = () => {
-      const edit_section = document.getElementsByClassName(userStyle.edit_section)
+      const edit_section = document.getElementsByClassName(userStyle.edit_section)[0]
+      
       edit_section.classList.replace(userStyle.on_edit, userStyle.on_accept)
 
-      const text_input = document.getElementsByClassName(userStyle.text_input)
+      const text_input = document.getElementsByClassName(userStyle.text_input)[0]
       text_input.readOnly = false
 
-      const letters_container = document.getElementsByClassName(userStyle.letters_container)
+      const letters_container = document.getElementsByClassName(userStyle.letters_container)[0]
       letters_container.classList.toggle(userStyle.on_focus)
 
-      const letters_quantity = document.getElementsByClassName(userStyle.number)
+      const letters_quantity = document.getElementsByClassName(userStyle.number)[0]
       letters_quantity.value = text_input.value.length + "/500"
+      console.log("ZDEDDDDDDDDDDDDDDDDDDDDDD ", letters_container)
     }
 
     const AcceptInput = () => {
-
-
 
       if (firstBio === '') {
         createUserBio(userData.id)
@@ -185,7 +185,6 @@ const UserPage = () => {
         updateUserBio(userData.id)
       }
 
-      
       const edit_section = document.querySelector("." + userStyle.edit_section)
       edit_section.classList.replace(userStyle.on_accept, userStyle.on_edit)
 
