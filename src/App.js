@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes } from "react-router-dom";
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import MainScreen from './pages/main/page/mainScreen';
 import DepresionScreen from './pages/hospitalPages/depresion/page/depresionScreen';
 import TdahScreen from './pages/hospitalPages/tdah/page/tdahScreen';
@@ -26,7 +26,7 @@ class App extends React.Component {
   //si no se pone exact, todas las qeu empiezne con / puededn renderizar el componente
   render() {
     return (
-        <HashRouter>
+        <BrowserRouter basename="/MentalHealthFrontendDeploy">
       <AuthProvider>
       <Routes>
 
@@ -51,7 +51,7 @@ class App extends React.Component {
   </Routes>
 
   </AuthProvider>
-    </HashRouter>
+    </BrowserRouter>
     
       
      //
