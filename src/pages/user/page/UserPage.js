@@ -162,16 +162,16 @@ const UserPage = () => {
     }
 
     const EditInput = () => {
-      const edit_section = document.querySelector("." + userStyle.edit_section)
+      const edit_section = document.getElementsByClassName(userStyle.edit_section)
       edit_section.classList.replace(userStyle.on_edit, userStyle.on_accept)
 
-      const text_input = document.querySelector("." + userStyle.text_input)
+      const text_input = document.getElementsByClassName(userStyle.text_input)
       text_input.readOnly = false
 
-      const letters_container = document.querySelector('.' + userStyle.letters_container)
+      const letters_container = document.getElementsByClassName(userStyle.letters_container)
       letters_container.classList.toggle(userStyle.on_focus)
 
-      const letters_quantity = document.querySelector("." + userStyle.number)
+      const letters_quantity = document.getElementsByClassName(userStyle.number)
       letters_quantity.value = text_input.value.length + "/500"
     }
 
@@ -197,32 +197,36 @@ const UserPage = () => {
     }
 
     const ManageTextarea = (maxValue) => {
-      const letter_quantity = document.querySelector('.' + userStyle.number)
-      const text_input = document.querySelector("." + userStyle.text_input)   
-      //  MAX LETTERS AVALIBLE VALIDATOR
-      let cant_letters = (text_input.value).length
-
+      const letter_quantity = document.getElementsByClassName(userStyle.number)[0]; // Get the first element with the class name
+      const text_input = document.getElementsByClassName(userStyle.text_input)[0]; // Get the first element with the class name
+    
+      // MAX LETTERS AVAILABLE VALIDATOR
+      let cant_letters = text_input.value.length;
+    
       if (cant_letters >= maxValue) {
-        letter_quantity.style.color = "var(--user-input-error)"
-        text_input.value = (text_input.value).slice(0, maxValue)  // slice(0, -1) --> Solo guarda los valores entre Array[0:maxValue]
-        cant_letters = (text_input.value).length
-      } else { letter_quantity.style.color = "var(--user-font)" }
-      //  MAX LETTERS AVALIBLE VALIDATOR
-
-      const line_height = parseInt(getComputedStyle(text_input).getPropertyValue("line-height"))
-      text_input.style.height = "auto"
-      let lines_quantity = text_input.scrollHeight / line_height
-
-      //  MAX LINES AVALIBLE VALIDATOR
-      if (lines_quantity > 10) {
-        let avalible_text = text_input.value.split("\n").slice(0, 10)
-
-        text_input.value = ""
-        avalible_text.forEach((stringElement) => {
-          text_input.value += stringElement + "\n"
-        })
-        text_input.value = text_input.value.slice(0,-1)
+        letter_quantity.style.color = "var(--user-input-error)";
+        text_input.value = text_input.value.slice(0, maxValue); // Slice(0, -1) --> Only keeps values between Array[0:maxValue]
+        cant_letters = text_input.value.length;
+      } else {
+        letter_quantity.style.color = "var(--user-font)";
       }
+      // MAX LETTERS AVAILABLE VALIDATOR
+    
+      const line_height = parseInt(getComputedStyle(text_input).getPropertyValue("line-height"));
+      text_input.style.height = "auto";
+      let lines_quantity = text_input.scrollHeight / line_height;
+    
+      // MAX LINES AVAILABLE VALIDATOR
+      if (lines_quantity > 10) {
+        let available_text = text_input.value.split("\n").slice(0, 10);
+    
+        text_input.value = "";
+        available_text.forEach((stringElement) => {
+          text_input.value += stringElement + "\n";
+        });
+        text_input.value = text_input.value.slice(0, -1);
+      }
+   
       //  MAX LINES AVALIBLE VALIDATOR
 
 
