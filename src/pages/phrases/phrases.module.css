@@ -31,7 +31,7 @@
     color: rgba(255, 255, 255, 1);
     font-size: calc(1em + 0.7vw);
     justify-self: center;
-    align-self: center;
+    text-align: center;
 }
 
 .containerphrases .button{ 

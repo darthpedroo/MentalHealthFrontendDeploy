@@ -67,7 +67,7 @@ const Blog = () => {
       
       <SinglePost details={details} comments={comments} likesProps={likes} />
 
-      <ShowProfile></ShowProfile>
+      <ShowProfile showBlog={true}></ShowProfile>
   
       
     </div>
