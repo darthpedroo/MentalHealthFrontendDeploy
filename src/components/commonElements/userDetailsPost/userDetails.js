@@ -20,7 +20,7 @@ function UserDetails({ messageType, author, date, pkUser }) {
     <div className={style.profile_pic_container}>
       <ProfilePicture data={pkUser}></ProfilePicture>
     </div>
-    <Link className={style.post_author} to={`http://localhost:3000/profile/${author}`}> <h1>{author}</h1> </Link>
+    <Link className={style.post_author} to={`http://localhost:3000/MentalHealthFrontendDeploy/profile/${author}`}> <h1>{author}</h1> </Link>
     <div className={style.separation_dot}></div>
     <h3 className={style.post_date}>{formatDate(date, new Date().getTime())}</h3>
 
