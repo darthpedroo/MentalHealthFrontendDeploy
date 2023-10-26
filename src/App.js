@@ -40,8 +40,8 @@ class App extends React.Component {
     <Route path='/bullying' element={<BullyinScreen></BullyinScreen>}></Route>
     <Route path="/main" element={<HospitalScreen></HospitalScreen>}></Route>    
     <Route path='/ansiedad' element={<AnsiedadScreen></AnsiedadScreen>}></Route>
-        <Route element={<PrivateRoute/>}>
-          <Route path ="/submit" element  = {<CreatePost></CreatePost>}> </Route>
+    <Route element={<PrivateRoute/>}>
+    <Route path ="/submit" element  = {<CreatePost></CreatePost>}> </Route>
           
         </Route>
     
