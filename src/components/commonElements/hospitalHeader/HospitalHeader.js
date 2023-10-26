@@ -16,14 +16,14 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
             trauma: 50,
             bullying: 70,
             ansiedad: 90,
-            out: -10,
+            out: -20,
         }
     
         let MainToPosition = {
             atencion: 58.3,
             frases: 74.9,
             blog: 91.5,
-            out: -10,
+            out: -20,
         }
     
         var problemValue = ProblemToPosition[problem_value]
@@ -101,7 +101,9 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
 
         selector[0].style.left = `calc(${header.dataset.main}% - (5%/2))`
         selector[1].style.left = `calc(${header.dataset.problem}% - (5%/2))`
-    }
+
+        document.querySelector(".mobile-container-option").classList.remove("on-hover-state")
+    }   
 
 
 
@@ -114,12 +116,39 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
                     <div className='img-container'><img className='logo' src={require('../../../assets/images/hospital/logo.png')} alt='Logo de la pagina'></img></div>
                     <h1 className="header-option header-title"><Link to="/main">HOSPITAL HATER</Link> </h1>
                 </li>  {/* selectorMove() utiliza data-pos para mover el cursor que se encuentra en el header */}
-                <li className="element"><Link to="" className="header-option   hoverEffect  main-option problems" style={{"--hover-color": 'pink'}} data-pos="58.3" onMouseOver={selectorMove}>ATENCION</Link></li> 
-                <li className="element"><Link to="/frases" className="header-option   hoverEffect main-option" style={{"--hover-color": 'olivedrab'}} data-pos="74.9" onMouseOver={selectorMove}>FRASES</Link></li>
-                <li className="element"><Link to="/blog" className="header-option   hoverEffect main-option" style={{"--hover-color": 'darkgreen'}} data-pos="91.5" onMouseOver={selectorMove}>BLOG</Link></li>
+
+                <div className="element-container">
+                    <li className="element"><Link to="" className="header-option   hoverEffect  main-option problems" style={{"--hover-color": 'pink'}} data-pos="64" onMouseOver={selectorMove}>ATENCION</Link></li> 
+                    <li className="element"><Link to="/frases" className="header-option   hoverEffect main-option" style={{"--hover-color": 'olivedrab'}} data-pos="81.8" onMouseOver={selectorMove}>FRASES</Link></li>
+                    <li className="element"><Link to="/blog" className="header-option   hoverEffect main-option" style={{"--hover-color": 'darkgreen'}} data-pos="91.5" onMouseOver={selectorMove}>BLOG</Link></li>
+                </div>
+
                 <li className="mobile mobile-element">
                     <img src={require("../../../assets/images/header/menu_icon.png")} alt="Menu Icon" className="mobile-icon" />
                 </li>
+
+                <ul className="mobile mobile-container-option">
+                    <li className="option-item atencion-listener" onClick={() => {document.querySelector(".mobile-container-option").classList.toggle("on-hover-state")}}><Link className='option-link' to="">ATENCION</Link></li>
+
+                    <li className="option-item"><Link className='option-link' to="/frases">FRASES</Link></li>
+
+                    <li className="option-item"><Link className='option-link' to="/blog">BLOG</Link></li>
+
+                    
+                    <ul className="mobile mobile-container-atencion">
+                        <li className="atencion-item"><Link className='option-link' to="/depresion">DEPRESION</Link></li>
+
+                        <li className="atencion-item"><Link className='option-link' to="/tdah">TDAH</Link></li>
+
+                        <li className="atencion-item"><Link className='option-link' to="/trauma">TRAUMA</Link></li>
+
+                        <li className="atencion-item"><Link className='option-link' to="/bullying">BULLYING</Link></li>
+
+                        <li className="atencion-item"><Link className='option-link' to="/ansiedad">ANSIEDAD</Link></li>
+                    </ul>
+                </ul>
+
+                
                 <div className="selector" ></div>
             </ul>
         </div>

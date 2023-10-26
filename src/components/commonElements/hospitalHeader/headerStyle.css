@@ -9,7 +9,7 @@
   z-index: 150;
 }
 
-#HospitalHeader .mobile {
+.mobile {
   display: none;
 }
 
@@ -20,18 +20,30 @@
     position: relative;
     background-color: var(--header-bg);
     border-bottom: 2px solid var(--header-border);
+    padding: 0 35px;
   }
   
   #HospitalHeader .hospital-header .header-list {
     height: 100%;
     width: 100%;
+    max-width: 1600px;
+    
+    margin: 0 auto;
     list-style: none;
 
-    position: relative;
+    /* position: relative;*/
+    background-color: var(--header-bg);
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  #HospitalHeader .hospital-header .header-list .element-container {
+    width: 40%;
+
+    display: flex;
+    justify-content: space-between;
   }
   
   #HospitalHeader .hospital-header .header-list .element {
@@ -58,7 +70,8 @@
   
   #HospitalHeader .hospital-header .header-list .selector {
     height: 3px;
-    width: 5%;
+    width: 15%;
+    max-width: 67px;
     background-color: var(--header-selector);
     position: absolute;
     bottom: 0;
@@ -122,7 +135,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   #HospitalHeader .hospital-header .header-list .header-option {
     font-size: 17px;
   }
@@ -136,12 +149,16 @@
   }
 }
 
-@media (max-width: 650px) {
-  #HospitalHeader .main-header .main-option {
+@media (max-width: 700px) {
+  #HospitalHeader .main-header .title-element {
+    flex-grow: 1;
+  }
+
+  #HospitalHeader .hospital-header .header-list .element-container {
       display: none;
   }
 
-  #HospitalHeader .mobile {
+  .mobile {
     display: inline-block;
   }
 
@@ -160,5 +177,84 @@
   }
 
 
-  .mobile-container-option {display: none;}
+  .mobile-container-option {
+    width: calc(200px - 4px);
+    height: calc(300px - 4px);
+
+    background-color: var(--header-bg);
+    border-radius: 7px;
+    border: 2px solid var(--header-border);
+    list-style: none;
+
+    position: absolute;
+    top: calc(80px + 4px);
+    right: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    opacity: 0; 
+
+    transform: scale(.5);
+    transition: all .35s;
+  }
+
+  .mobile-element:hover {
+    cursor: pointer;
+  }
+
+
+  .atencion-listener:hover ~ .mobile-container-atencion,
+
+  .mobile-container-option.on-hover-state,
+  .mobile-element:hover + .mobile-container-option {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .option-link {
+    font-family: 'Paytone One';
+    font-weight: 100;
+  }
+
+  .mobile-container-atencion {
+    width: calc(200px - 4px);
+    height: calc(300px - 4px);
+
+    background-color: var(--header-bg);
+    border-radius: 7px;
+    border: 2px solid var(--header-border);
+    list-style: none;
+
+    position: absolute;
+    left: -210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    opacity: 0; 
+
+    transform: scale(.5);
+    transition: all .35s;
+  }
+}
+
+
+@media (max-width: 510px) {
+  #HospitalHeader .main-header .title-element .header-title {
+    font-size: 21px;
+  }
+
+  #HospitalHeader .main-header .title-element .img-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  #HospitalHeader .main-header .title-element {
+    gap: 10px;
+  }
 }
