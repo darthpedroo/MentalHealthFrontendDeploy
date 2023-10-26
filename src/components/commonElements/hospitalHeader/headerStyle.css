@@ -70,7 +70,7 @@
   
   #HospitalHeader .hospital-header .header-list .selector {
     height: 3px;
-    width: 15%;
+    width: 10%;
     max-width: 67px;
     background-color: var(--header-selector);
     position: absolute;
@@ -108,7 +108,7 @@
   
   #HospitalHeader .problems-header {
     /* Contiene todos los problemas  (depresión - TDAH - trauma - bullying - estrés) */ 
-    position: fixed;
+    position: absolute;
     top: -80px;
     left: 0;
     transition: top .8s ease;

@@ -4,35 +4,26 @@ import './headerStyle.css';
 import { Link } from "react-router-dom";
 
 
-function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=false} ){ 
+function HospitalHeader( {problem_value="default", main_value="default", isScrollLocked=false} ){ 
     /* 10 - Depresion   30 - TDAH   50 - Trauma   70 - Bullying   90 - Ansiedad*/
 
 
     /*https://chat.openai.com/share/5ecc729e-3f5a-4882-8e60-338a15a48c51 CAMBIE EL USEEFFECT DEL HEADER PORQE ANDABA MAL EN EL BLOG PAVOTE E EE E*/
     useEffect(() => {
-        let ProblemToPosition = {
-            depresion: 10,
-            tdah: 30,
-            trauma: 50,
-            bullying: 70,
-            ansiedad: 90,
-            out: -20,
-        }
-    
-        let MainToPosition = {
-            atencion: 58.3,
-            frases: 74.9,
-            blog: 91.5,
-            out: -20,
-        }
-    
-        var problemValue = ProblemToPosition[problem_value]
-        var mainValue = MainToPosition[main_value]
-    
+
         let header = document.querySelector("#HospitalHeader")
-    
-        header.dataset.main = mainValue
-        header.dataset.problem = problemValue
+
+        var problemInitialPosition = "out"
+        var mainInitialPosition = "out"
+
+        if (problem_value !== "default") {
+            problemInitialPosition = "header-" + problem_value
+        } if (main_value !== "default") {
+            mainInitialPosition = "header-" + main_value
+        }
+
+        header.dataset.problem = problemInitialPosition
+        header.dataset.main = mainInitialPosition
     
         headerMove()
 
@@ -42,13 +33,15 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
         } else {
             function handleScroll () {
                 const mainHeader = document.querySelector("#HospitalHeader")
+                const hospital_header = document.querySelector("#HospitalHeader .main-header")
+                const problems_header = document.querySelector("#HospitalHeader .problems-header")
 
-                if (mainHeader) { 
+                if (hospital_header && problems_header) { 
 
                     if ((window.scrollY > 100)) {
                         mainHeader.style.top = "0";
                       } else {
-                        mainHeader.style.top = "-80px";
+                        mainHeader.style.top = "-160px";
                       }
 
                 }
@@ -70,12 +63,10 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
     
 
 
-    const selectorMove = (event) => {
+    const selectorHover = (event) => {
         let problems_header = document.getElementsByClassName("problems-header")[0]
         let selector = document.querySelectorAll(".header-list .selector") //Esto selecciona los 2 cursores
-
         let target = event.target
-        let pos = parseFloat(target.dataset.pos)
 
         if (target.classList.contains("main-option")) { // Para saber cual de los 2 selectores mostrar 
             selector = selector[0] // top-header cursor 
@@ -89,7 +80,24 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
             problems_header.classList.remove("problems-header-on-hover")
         }
 
-        selector.style.left = `calc(${pos}% - (5%/2))`
+        selectorMove(target, selector)
+    }
+
+    const selectorMove = (target, selector) => {
+
+        console.log(target)
+        if (target === "out") {
+            var pos = -100
+            var target_width = 0
+        } else {
+            var pos = target.getBoundingClientRect().x //this gets the position in x according to the viewport
+            var target_width = target.offsetWidth
+        }
+
+        let selector_width = selector.offsetWidth
+        let width_offset = (target_width - selector_width) / 2
+
+        selector.style.left = `${pos + width_offset}px`
     }
 
     const headerMove = (event) => {
@@ -99,8 +107,13 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
         let selector = document.querySelectorAll(".header-list .selector") //Esto selecciona los 2 cursores
         let header = document.querySelector("#HospitalHeader")
 
-        selector[0].style.left = `calc(${header.dataset.main}% - (5%/2))`
-        selector[1].style.left = `calc(${header.dataset.problem}% - (5%/2))`
+
+        let target = [
+            document.querySelector("." + header.dataset.main) || "out",
+            document.querySelector("." + header.dataset.problem) || "out",
+        ]
+        selectorMove(target[0], selector[0])
+        selectorMove(target[1], selector[1])
 
         document.querySelector(".mobile-container-option").classList.remove("on-hover-state")
     }   
@@ -118,9 +131,9 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
                 </li>  {/* selectorMove() utiliza data-pos para mover el cursor que se encuentra en el header */}
 
                 <div className="element-container">
-                    <li className="element"><Link to="" className="header-option   hoverEffect  main-option problems" style={{"--hover-color": 'pink'}} data-pos="64" onMouseOver={selectorMove}>ATENCION</Link></li> 
-                    <li className="element"><Link to="/frases" className="header-option   hoverEffect main-option" style={{"--hover-color": 'olivedrab'}} data-pos="81.8" onMouseOver={selectorMove}>FRASES</Link></li>
-                    <li className="element"><Link to="/blog" className="header-option   hoverEffect main-option" style={{"--hover-color": 'darkgreen'}} data-pos="91.5" onMouseOver={selectorMove}>BLOG</Link></li>
+                    <li className="element"><Link to="" className="header-option   hoverEffect  main-option problems" style={{"--hover-color": 'pink'}} onMouseOver={selectorHover}>ATENCION</Link></li> 
+                    <li className="element"><Link to="/frases" className="header-option   hoverEffect main-option header-frases" style={{"--hover-color": 'olivedrab'}} onMouseOver={selectorHover}>FRASES</Link></li>
+                    <li className="element"><Link to="/blog" className="header-option   hoverEffect main-option header-blog" style={{"--hover-color": 'darkgreen'}} onMouseOver={selectorHover}>BLOG</Link></li>
                 </div>
 
                 <li className="mobile mobile-element">
@@ -155,11 +168,11 @@ function HospitalHeader( {problem_value="out", main_value="out", isScrollLocked=
 
         <div className="hospital-header problems-header" onMouseLeave={headerMove}>
             <ul className="header-list">
-                <li className="element"><Link to="/depresion" className="header-option   hoverEffect  problem-option" style={{"--hover-color": 'aqua'}} data-pos="10" onMouseOver={selectorMove}>DEPRESION</Link></li>
-                <li className="element"><Link to="/tdah" className="header-option   hoverEffect  problem-option" style={{"--hover-color": 'orange'}} data-pos="30" onMouseOver={selectorMove}>TDAH</Link></li>
-                <li className="element"><Link to="/trauma" className="header-option   hoverEffect  problem-option" style={{"--hover-color": 'indigo'}} data-pos="50" onMouseOver={selectorMove}>TRAUMA</Link></li>
-                <li className="element"><Link to="/bullying" className="header-option   hoverEffect  problem-option" style={{"--hover-color": 'yellow'}} data-pos="70" onMouseOver={selectorMove}>BULLYING</Link></li>
-                <li className="element"><Link to="/ansiedad" className="header-option   hoverEffect  problem-option" style={{"--hover-color": 'red'}} data-pos="90" onMouseOver={selectorMove}>ANSIEDAD</Link></li>
+                <li className="element"><Link to="/depresion" className="header-option   hoverEffect  problem-option header-depresion" style={{"--hover-color": 'aqua'}} onMouseOver={selectorHover}>DEPRESION</Link></li>
+                <li className="element"><Link to="/tdah" className="header-option   hoverEffect  problem-option header-tdah" style={{"--hover-color": 'orange'}} onMouseOver={selectorHover}>TDAH</Link></li>
+                <li className="element"><Link to="/trauma" className="header-option   hoverEffect  problem-option header-trauma" style={{"--hover-color": 'indigo'}} onMouseOver={selectorHover}>TRAUMA</Link></li>
+                <li className="element"><Link to="/bullying" className="header-option   hoverEffect  problem-option header-bullying" style={{"--hover-color": 'yellow'}} onMouseOver={selectorHover}>BULLYING</Link></li>
+                <li className="element"><Link to="/ansiedad" className="header-option   hoverEffect  problem-option header-ansiedad" style={{"--hover-color": 'red'}} onMouseOver={selectorHover}>ANSIEDAD</Link></li>
                 <div className="selector" ></div>
             </ul>
         </div>
