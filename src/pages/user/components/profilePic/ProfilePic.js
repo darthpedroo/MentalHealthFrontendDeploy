@@ -9,10 +9,10 @@ const ProfilePic = ({ data }) => {
   useEffect(() => {
     if (data) {
       axios
-        .get(`hthttps://darthpedro.pythonanywhere.com/images/${data}/`)
+        .get(`https://darthpedro.pythonanywhere.com/images/${data}/`)
         .then((res) => {
           if (res.data.picture !== null) {
-            setImage(`http://127.0.0.1:8000/media/profilepics/${res.data.picture.replace(/^\/media\/profilepics\//, '')}`);
+            setImage(`https://darthpedro.pythonanywhere.com/media/profilepics/${res.data.picture.replace(/^\/media\/profilepics\//, '')}`);
             setLoading(false)
           }
         })
