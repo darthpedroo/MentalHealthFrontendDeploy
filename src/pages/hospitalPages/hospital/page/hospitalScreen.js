@@ -38,7 +38,7 @@ function HospitalScreen() {
         <LocationContainer barrio="Flores" calle="Av. Rivadavia" horario="Lun. a Viernes 08:00 a 20:00" image="locacion1" />
         <LocationContainer barrio="Avellaneda" calle="Av. Belgrano" horario="Lun. a Viernes 07:30 a 21:00" image="locacion2" />
         <LocationContainer barrio="Wilde" calle="Av. Mitre" horario="Lun. a Viernes 07:00 a 20:00" image="locacion3" />
-        <LocationContainer barrio="Barracas" calle="Av. Patricios" horario="Lun. a Viernes 08:30 a 20:30" image="locacion4" />
+        <LocationContainer barrio="Barracas" calle="Av. Patricios" horario="Lun. a Viernes 08:30 a 20:30" image="locacion4" mediaStyle={styles.medium} />
       </section>
 
       {/* Services */}
@@ -97,12 +97,12 @@ function HospitalScreen() {
   );
 }
 
-function LocationContainer({ barrio, calle, horario, image }) {
+function LocationContainer({ barrio, calle, horario, image, mediaStyle }) {
   if (image == null) {
     image = "locacion1";
   }
   return (
-    <div className={styles.containerLocation}>
+    <div className={`${styles.containerLocation} ${mediaStyle}`}>
       <img alt={image} height={200} width={300} src={require('../../../../assets/images/hospital/hospital/' + image + '.png')} />
       <div className={styles.infoLocation}>
         <div className={styles.barrio}>

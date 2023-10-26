@@ -16,6 +16,11 @@
   height: 40vh;
   background-size: cover;
   background-color: rgb(39, 39, 39);
+  overflow: hidden;
+}
+
+.bannerText{
+  width: 90%;
 }
 
 .banner img {
@@ -140,6 +145,8 @@
   margin-left: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
+  width: 300px;
+  height: 200px;
 }
 
 .containerLocation img {
@@ -266,4 +273,54 @@
   font-size: calc(0.5em + 0.75vw);
   margin: 5px;
   padding-left: 5px;
+}
+
+
+@media (max-width: 1300px) {
+  .locationWrapper {
+    flex-wrap: wrap;
+    justify-content:space-around ;
+  }
+
+  .locationWrapper .medium {
+    width: 40%;
+
+  }
+
+  .locationWrapper .medium img {
+    width: 100%;
+  }
+
+  .locationWrapper .medium .infoLocation div{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .locationWrapper .medium{
+    width: unset;
+  }
+  .locationWrapper .medium img {
+    width: 300px;
+    height: 200px; /* Reset the width to the default value */
+  }
+
+  .locationWrapper .medium .infoLocation div {
+    display: block;
+  }
+
+  .servicesWrapper {
+    flex-wrap: wrap;
+  }
+  .servicesContainer {
+    height: unset;
+    width: unset;
+    padding: 20px;
+  }
+
+  .banner .ctaButton{
+    margin-top: 10px;
+  }
 }
