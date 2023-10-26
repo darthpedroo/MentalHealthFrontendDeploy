@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0 --disable-host-check --open",
+    "start": "webpack-dev-server --devtool eval-source-map --host 0.0.0.0 --disable-host-check --open",
     "predeploy": "npm run build",
     "deploy":"gh-pages -d build",
     "build": "react-scripts build",
