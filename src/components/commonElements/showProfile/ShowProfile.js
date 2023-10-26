@@ -5,9 +5,10 @@ import AuthContext from '../../../context/AuthContext'
 import profileStyle from './ShowProfile.module.css'
 import  ProfilePicture  from '../../../pages/user/components/profilePic/ProfilePic'
 
-function ShowProfile()  {
+function ShowProfile({showBlog=false})  {
   
   let {user} = useContext(AuthContext)
+  console.log("ASDASDASDASDASDAS", user)
 
 
 
@@ -39,11 +40,13 @@ function ShowProfile()  {
             </Link>
           </li>
 
+          {user && showBlog ?
           <li className={profileStyle.button}>
             <Link to={"/blog"} className={profileStyle.icon_container}>
              <svg className={profileStyle.button_icon} xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M19 5v14H5V5h14m2-2H3v18h18V3m-4 14H7v-1h10v1m0-2H7v-1h10v1m0-3H7V7h10v5Z"/></svg>
             </Link>
           </li>
+          : null}
 
           {user ?
           <li className={profileStyle.button} onClick={logoutUser} >
