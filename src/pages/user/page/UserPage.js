@@ -199,8 +199,6 @@ const UserPage = () => {
     const ManageTextarea = (maxValue) => {
       const letter_quantity = document.querySelector('.' + userStyle.number)
       const text_input = document.querySelector("." + userStyle.text_input)   
-
-
       //  MAX LETTERS AVALIBLE VALIDATOR
       let cant_letters = (text_input.value).length
 

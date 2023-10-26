@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App'; // Import the main App component
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/MentalHealthFrontendDeploy">
     <App />
   </BrowserRouter>,
   document.getElementById('root'),

@@ -26,7 +26,6 @@ class App extends React.Component {
   //si no se pone exact, todas las qeu empiezne con / puededn renderizar el componente
   render() {
     return (
-        <BrowserRouter basename="/MentalHealthFrontendDeploy">
       <AuthProvider>
       <Routes>
 
@@ -51,7 +50,6 @@ class App extends React.Component {
   </Routes>
 
   </AuthProvider>
-    </BrowserRouter>
     
       
      //
