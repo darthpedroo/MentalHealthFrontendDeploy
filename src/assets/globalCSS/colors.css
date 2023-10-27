@@ -137,6 +137,7 @@
     --show-profile-container-hover: rgb(51, 49, 49);
     --show-profile-shadow: rgba(0, 0, 0, 0.432);
     --show-username: var(--clr-white);
+    --show-profile-border: gray;
     /* ShowProfile COLORS */
 
 

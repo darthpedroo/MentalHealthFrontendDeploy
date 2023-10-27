@@ -41,3 +41,9 @@
     display: flex;
     gap: 35px;
   }
+
+  @media (max-width: 500px) {
+    .post_title {
+      font-size: 25px;
+    }
+  }

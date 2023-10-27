@@ -33,3 +33,9 @@
     width: 100%;
     margin-bottom: 100px;
   }
+
+  @media (max-width: 500px) {
+    .blog .title {
+      font-size: 160px;
+    }
+  }
