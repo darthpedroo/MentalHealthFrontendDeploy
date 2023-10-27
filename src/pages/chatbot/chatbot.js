@@ -7,6 +7,7 @@ function ChatBotChat ({visible}){
   const [buttonText,setButtontext] = useState('')
   const [problem, setProblem] = useState('menu')
   const [array, setArray] = useState(['Hola necesito ayuda', 'Envía tu trastorno para comenzar']);
+  const [loading, setLoading] = useState(true)
   const messageBoxRef = useRef(null)
   const opacityStyle = {
     opacity: visible ? 1 : 0,
@@ -34,7 +35,7 @@ function ChatBotChat ({visible}){
     function OnClicking(data,response) {
       const newArray = [...array];
       newArray.push(response,data); 
-
+      setLoading(true)
       if (response === "Tengo otro problema"){
         setProblem("menu")
         setArray(newArray)
@@ -63,6 +64,7 @@ function ChatBotChat ({visible}){
         axios.get(`https://darthpedro.pythonanywhere.com/chatbot_entry/${problem}`)
         .then(response => {    
             HandleResponse({response})
+            setLoading(false)
         })
         .catch(error => {
           console.error('Error fetching available phrase:', error);
@@ -142,7 +144,7 @@ function ChatBotChat ({visible}){
         </div>
   
         <div className={styles.buttons}>
-          {buttonText.length > 0 ? (
+          {buttonText.length > 0 && loading === false ? (
             buttonText.map((output, id) => (
               <ChatButton key={id} data={output} clickFunction={OnClicking} />
             ))
