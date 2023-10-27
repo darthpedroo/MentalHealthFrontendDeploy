@@ -65,7 +65,7 @@ function Timer() {
     hours = "0" + hours.toString();
   }
 
-  return <div className={styles.timer}>{hours + ":" + minutes + ":" + seconds}</div>;
+  return <div className={styles.timer}>{hours + " : " + minutes + " : " + seconds}</div>;
 }
 
 export default Phrases;

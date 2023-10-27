@@ -35,8 +35,12 @@
 }
 
 .timer{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(191, 191, 191);
+    font-family: "calibre";
+    font-size: 19px;
+
+    letter-spacing: 2px;
+    word-spacing: 2px;
 }
 a:-webkit-any-link {
     color: white;
