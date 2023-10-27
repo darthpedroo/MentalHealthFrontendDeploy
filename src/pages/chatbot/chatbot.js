@@ -10,7 +10,8 @@ function ChatBotChat ({visible}){
   const messageBoxRef = useRef(null)
   const opacityStyle = {
     opacity: visible ? 1 : 0,
-    left: visible ? '62%' : '100%',
+
+    right: visible ? '3%' : '0%',
     transition: 'all 0.75s',
   }
   const scrollToBottom = () => {

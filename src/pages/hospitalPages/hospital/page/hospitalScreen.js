@@ -16,7 +16,9 @@ function HospitalScreen() {
       <ChatBot />
       {/* Banner */}
       <section className={styles.banner} >
-        <img alt='crazy room' src={require('../../../../assets/images/hospital/hospital/cama.png')} height={400} width={600} />
+        <div className={styles.imgContainer}>
+          <img alt='crazy room' src={require('../../../../assets/images/hospital/hospital/cama.png')} height={400} width={600} />
+        </div>
         <div className={styles.bannerText}>
           <h1>Las mejores instalaciones de todo el país con paredes acolchadas</h1>
           <button className={styles.ctaButton}>Ver Instalaciones</button>
@@ -38,7 +40,7 @@ function HospitalScreen() {
         <LocationContainer barrio="Flores" calle="Av. Rivadavia" horario="Lun. a Viernes 08:00 a 20:00" image="locacion1" />
         <LocationContainer barrio="Avellaneda" calle="Av. Belgrano" horario="Lun. a Viernes 07:30 a 21:00" image="locacion2" />
         <LocationContainer barrio="Wilde" calle="Av. Mitre" horario="Lun. a Viernes 07:00 a 20:00" image="locacion3" />
-        <LocationContainer barrio="Barracas" calle="Av. Patricios" horario="Lun. a Viernes 08:30 a 20:30" image="locacion4" mediaStyle={styles.medium} />
+        <LocationContainer barrio="Barracas" calle="Av. Patricios" horario="Lun. a Viernes 08:30 a 20:30" image="locacion4"  />
       </section>
 
       {/* Services */}
@@ -97,12 +99,12 @@ function HospitalScreen() {
   );
 }
 
-function LocationContainer({ barrio, calle, horario, image, mediaStyle }) {
+function LocationContainer({ barrio, calle, horario, image}) {
   if (image == null) {
     image = "locacion1";
   }
   return (
-    <div className={`${styles.containerLocation} ${mediaStyle}`}>
+    <div className={`${styles.containerLocation} `}>
       <img alt={image} height={200} width={300} src={require('../../../../assets/images/hospital/hospital/' + image + '.png')} />
       <div className={styles.infoLocation}>
         <div className={styles.barrio}>

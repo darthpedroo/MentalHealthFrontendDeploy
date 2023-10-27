@@ -146,8 +146,9 @@
 }
 .tdah-popup {
     position: fixed;
-    width: 16vw;
-    height: 22vh;
+    width: 400px;
+    aspect-ratio: 16/9;
+    
     margin: 0;
 }
 .tdah-popup-inner {
@@ -218,3 +219,14 @@
     opacity: 0.1;
 }
 
+
+@media (max-width:1000px) {
+    .tdah-popup{
+        width: 300px;
+    }
+}
+@media (max-width:700px) {
+    .tdah-popup{
+        width: 200px;
+    }
+}

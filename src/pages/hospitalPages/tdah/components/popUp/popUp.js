@@ -14,8 +14,9 @@ function PopUp() {
         if (randomNumber === 1) {
             const gifsArray = ["familyguy1","minecraft1","minecraft2","subwaysurferos","minecraft3","minecraft4","familyguy2","familyguy3","familyguy4","familyguy5"];
             const newArray = [...allPopups];
-            let randomPosx = Math.floor(Math.random() * window.innerWidth) -  (16 * window.innerWidth) / 100;
-            let randomPosy = Math.floor(Math.random() * window.innerHeight) -  (22 * window.innerHeight) / 100;
+            let [width, height] = [window.innerWidth > 1000 ? 300 : window.innerWidth > 700 ? 200 : 400, (window.innerWidth > 1000 ? 300 : window.innerWidth > 700 ? 200 : 400) / (16/9)];
+            let randomPosx = Math.floor(Math.random() * (window.innerWidth - width));
+let randomPosy = Math.floor(Math.random() * (window.innerHeight - height));
             if (randomPosx < 0){
                 randomPosx = 0
             };
