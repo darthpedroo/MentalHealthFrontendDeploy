@@ -33,9 +33,6 @@ function Phrases() {
         <h1 className={styles.h1}>{phrase}</h1>
         <Timer />
         <CustomCursor />
-        <button className={styles.button}>
-          <Link to="/main">Volver</Link>
-        </button>
       </div>
     </div>
   );

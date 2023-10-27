@@ -34,18 +34,6 @@
     text-align: center;
 }
 
-.containerphrases .button{ 
-    font-family: "Raleway";
-    background-color: var(--global-background);
-    border: 0;
-    position: absolute;
-    top: 80%;
-
-}
-.containerphrases .button :hover{
-    text-decoration:underline;
-}
-
 .timer{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
