@@ -252,3 +252,47 @@
   margin: 20px auto 0 auto;
   opacity: .5;
 }
+
+
+@media (max-width: 800px) {
+  .box {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    padding: 25px 7px 40px 7px;
+    justify-content: end;
+  }
+
+  .rules_section {
+    display: none;
+  }
+
+  .submit_section {
+    width: 100%;
+  }
+
+  .picture_container {
+    display: none;
+  }
+
+  .textarea {
+    height: 300px;
+  }
+
+  .input_container {
+    height: 43px;
+    margin: 0;
+  }
+
+  .box {
+    gap: 25px;
+  }
+
+  .button {
+    margin: 0;
+  }
+}

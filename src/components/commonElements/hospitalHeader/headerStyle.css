@@ -149,6 +149,10 @@
   }
 }
 
+
+
+
+
 @media (max-width: 700px) {
   #HospitalHeader .main-header .title-element {
     flex-grow: 1;
@@ -178,7 +182,7 @@
 
 
   .mobile-container-option {
-    width: calc(200px - 4px);
+    width: 47%;
     height: calc(300px - 4px);
 
     background-color: var(--header-bg);
@@ -196,6 +200,7 @@
     justify-content: space-around;
 
     opacity: 0; 
+    visibility: hidden;
 
     transform: scale(.5);
     transition: all .35s;
@@ -212,6 +217,7 @@
   .mobile-element:hover + .mobile-container-option {
     opacity: 1;
     transform: scale(1);
+    visibility: visible;
   }
 
   .option-link {
@@ -220,7 +226,7 @@
   }
 
   .mobile-container-atencion {
-    width: calc(200px - 4px);
+    width: 100%;
     height: calc(300px - 4px);
 
     background-color: var(--header-bg);
@@ -229,7 +235,7 @@
     list-style: none;
 
     position: absolute;
-    left: -210px;
+    left: calc(-100% + -10px);
 
     display: flex;
     flex-direction: column;
@@ -237,6 +243,7 @@
     justify-content: space-around;
 
     opacity: 0; 
+    visibility: hidden;
 
     transform: scale(.5);
     transition: all .35s;
