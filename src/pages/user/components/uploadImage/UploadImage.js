@@ -29,10 +29,10 @@ const UploadImage = ({data, imageType, closeFunction}) => {
           setBannerLoaded(true)
         }
         setGotResponse(true)
-        console.log("got response: ", gotResponse)
       })
       .catch((err)=>{
-        console.error("Error en el shitposteo: ", err)
+        setGotResponse(true)
+        console.error("Error getting the image: ", err)
       })
     }
     
