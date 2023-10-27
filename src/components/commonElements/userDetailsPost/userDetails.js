@@ -20,9 +20,12 @@ function UserDetails({ messageType, author, date, pkUser }) {
     <div className={style.profile_pic_container}>
       <ProfilePicture data={pkUser}></ProfilePicture>
     </div>
-    <Link className={style.post_author} to={`https://darthpedroo.github.io/MentalHealthFrontendDeploy/profile/${author}`}> <h1>{author}</h1> </Link>
-    <div className={style.separation_dot}></div>
-    <h3 className={style.post_date}>{formatDate(date, new Date().getTime())}</h3>
+
+    <div className={style.profile_data}>
+      <Link className={style.post_author} to={`https://darthpedroo.github.io/MentalHealthFrontendDeploy/profile/${author}`}> <h1 className={style.post_author_text}>{author}</h1> </Link>
+      <div className={style.separation_dot}></div>
+      <h3 className={style.post_date}>{formatDate(date, new Date().getTime())}</h3>
+    </div>
 
   </div>
 
