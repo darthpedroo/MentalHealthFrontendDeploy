@@ -1,5 +1,5 @@
 .profile_count_container {
-    height: 50px;
+    height: 60px;
 
     background-color: var(--show-profile-container);
     border-radius: 10px;
@@ -15,32 +15,47 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
 
     transition: background-color .5s;
 }
 
+.profile_section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    overflow: hidden;
+}
+
 .picture_section {
-    width: 43px;
-    height: 43px;
+    width: 45px;
+    height: 45px;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    flex-shrink: 0;
 }
 
 .username_section {
-    height: inherit;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-shrink: 4;
+    overflow: hidden;
 }
 
 .username {
+    max-width: 17ch;
+    min-width: 1ch;
+
     font-family: 'calibre';
     font-size: 25px;
-    color: var(--show-username)
+    color: var(--show-username);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .buttons_container {
@@ -53,8 +68,8 @@
 }
 
 .button {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
 
     transition: background-color .5s;
@@ -81,4 +96,31 @@
 
 .logout_icon {
     transform: translateX(2px); /* the image isnt center (image issue) */
+}
+
+@media (max-width: 500px) {
+    .profile_count_container {
+        width: 95%;
+        height: 70px;
+
+        left: 2.5%;
+        bottom: 10px;
+
+        box-shadow: 0 0 20px 0 black;
+        border: 2px solid var(--show-profile-border);
+    }
+
+    .picture_section {
+        width: 50px;
+        height: 50px;
+    }
+
+    .buttons_container {
+        gap: 25px;
+    }
+
+    .button_icon {
+        width: 27px;
+        height: 27px;
+    }
 }

@@ -21,15 +21,16 @@ function ShowProfile({showBlog=false})  {
     
     <div className={profileStyle.profile_count_container} >
 
-        
-        <div className={profileStyle.picture_section}>
-            <ProfilePicture data={(user ? user.user_id : "")}></ProfilePicture>
-        </div>
+        <div className={profileStyle.profile_section}>
+          <div className={profileStyle.picture_section}>
+              <ProfilePicture data={(user ? user.user_id : "")}></ProfilePicture>
+          </div>
 
-        <div className={profileStyle.username_section}>
-          <h1 className={profileStyle.username}>
-              {user ? user.username : "Logearse"}
-          </h1>
+          <div className={profileStyle.username_section}>
+            <h1 className={profileStyle.username}>
+                {user ? user.username : "Logearse"}
+            </h1>
+          </div>
         </div>
 
         <ul className={profileStyle.buttons_container}>
