@@ -2,8 +2,8 @@
     position: fixed;
     height: 75px;
     width: 75px;
-    top: 88%;
-    left: 94%;
+    right: 1%;
+    bottom:  1%;
     border-radius: 50%;
     border: 0;
     background-image: url(../../assets/images/hospital/icon.png);
@@ -19,8 +19,8 @@
 
 .chatbotmain{
     position: fixed;
-    top: 10%;
-    left: 90%;
+    bottom: 9.5%;
+    right: 3%;
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
@@ -191,4 +191,26 @@
 
 ::-webkit-scrollbar-track {
     background: none;
+}
+
+
+
+
+@media (max-width: 1300px) {
+    .chatbotmain{
+        width: 40vw;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .chatbotmain{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .chatbotmain{
+        width: 90vw;
+    }
 }
