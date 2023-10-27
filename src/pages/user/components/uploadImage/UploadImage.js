@@ -13,10 +13,11 @@ const UploadImage = ({data, imageType, closeFunction}) => {
   const [selectedBanner, setSelectedBanner ] = useState('')
   const [bannerLoaded, setBannerLoaded] = useState(false)
   const [pictureLoaded, setPitctureLoaded] = useState(false)
-
+  const [gotResponse, setGotResponse] = useState(false)
+ 
 
   useEffect(()=>{
-    console.log(pictureLoaded,bannerLoaded)
+    
     if(data){
       axios
       .get(`https://darthpedro.pythonanywhere.com/images/${data}/`)
@@ -27,14 +28,15 @@ const UploadImage = ({data, imageType, closeFunction}) => {
         if (response.data.banner !== null){
           setBannerLoaded(true)
         }
-        
+        setGotResponse(true)
+        console.log("got response: ", gotResponse)
       })
       .catch((err)=>{
         console.error("Error en el shitposteo: ", err)
       })
     }
     
-  },[data, bannerLoaded,pictureLoaded])
+  },[data, bannerLoaded,pictureLoaded, gotResponse])
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -76,7 +78,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
         })
         .then((response) => {
           console.log('Profile picture and banner upload successful:', response.data);
-  
+          window.location.reload()
         })
         .catch((error) => {
           console.error('Profile picture and banner upload failed:', error);
@@ -93,7 +95,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
           })
           .then((response) => {
             console.log('Profile picture update successful:', response);
-            // Handle success for profile picture update
+            window.location.reload()
           })
           .catch((error) => {
             console.error('Profile picture update failed:', error);
@@ -107,6 +109,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
           })
           .then((response) => {
             console.log('Banner update successful:', response);
+            window.location.reload()
             // Handle success for banner update
           })
           .catch((error) => {
@@ -180,7 +183,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
                 />
               </button>
               
-              <button onClick={handleImageSubmit} className={`${uploadStyle.upload_button} ${uploadStyle.button}`}>Confirmar nueva imagen de perfil</button>
+              <button onClick={handleImageSubmit} disabled={gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen de perfil</button>
 
             </div>
       
@@ -212,7 +215,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
       
             <div className={uploadStyle.buttons_container}>
 
-              <button onClick={changeBanner} className={`${uploadStyle.change_button} ${uploadStyle.button}`}> Cambiar imagen del banner
+              <button onClick={changeBanner} className={`${uploadStyle.change_button} ${uploadStyle.button}`} style={{}}> Cambiar imagen del banner
                 <input type="file"
                 name="image_url"
                 accept="image/jpeg,image/png,image/gif"
@@ -222,7 +225,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
                 className={uploadStyle.banner_input}></input>
               </button>
               
-              <button onClick={handleImageSubmit} className={`${uploadStyle.upload_button} ${uploadStyle.button}`}>Confirmar nueva imagen del banner</button>
+              <button onClick={handleImageSubmit} disabled={gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen del banner</button>
 
             </div>
       

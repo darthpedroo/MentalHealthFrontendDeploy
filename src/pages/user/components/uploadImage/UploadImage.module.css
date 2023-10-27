@@ -140,3 +140,11 @@
 
     box-shadow: 0 0 50px 5px var(--upload-button-shadow);
 }
+
+.grayBackground {
+    background-color: gray;
+  }
+  
+  .greenBackground {
+    background-color: var(--upload-button);
+  }
