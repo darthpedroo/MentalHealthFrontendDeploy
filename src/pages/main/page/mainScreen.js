@@ -25,63 +25,69 @@ gsap.registerEase(Power4.easeInOut)
 
 function MainScreen() {
 
+
   useEffect(() => {
-    /*                ELEMENTS DECLARATION                  */
-    const particula = document.querySelectorAll(".particle")
     const title = document.querySelector("#title .text")
     const arrow = document.querySelector("#title .arrow-container")
     const afterHeader = CSSRulePlugin.getRule("#cabeza .background::after")
     const beforeHeader = CSSRulePlugin.getRule("#cabeza .background::before")
-  
-    document.querySelector("body").classList.toggle("overflow-disabled");
 
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
+          /*      SCROLL ANIMATION     */
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: "#desc",
+              start: "top bottom",
+              end: "top center",
+              scrub: true,
+            } 
+          })
+  
+        .to(title, {fontSize: 40, top: 0}, 0)
+        .to(arrow, {bottom: -300}, 0)
+        .to(afterHeader, {cssRule: {top: -3}}, 0)
+        .to(beforeHeader, {cssRule: {top: 0}}, 0)
+        /*      SCROLL ANIMATION     */
+
+
+    const ua = navigator.userAgent;
+    console.log(ua)
+    if ( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(window.navigator.userAgent) ) {
+
+      /*                ELEMENTS DECLARATION                  */
+      const particula = document.querySelectorAll(".particle")
+    
+      document.querySelector("body").classList.toggle("overflow-disabled");
+
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+
+
+      /*          STARTING  ANIMATION         */
+        let tl = gsap.timeline({
+          defaults: {
+              ease: Power4.easeInOut,
+              duration: 2
+            }
+        })
+
+
+        tl.from(title, 2, {top: 0 - parseInt(getComputedStyle(title).height)})
+        tl.from(arrow, 1, {bottom: -100}, "+1")
+    
+        particula.forEach(part => {
+          let speed = parseFloat(part.dataset.speed)
+          tl.from(part, .7+speed, {top: -150}, "+1")
+        });
+
+        setTimeout(() => {
+          //document.querySelector("body").style.overflowY = "auto"
+          document.querySelector("body").classList.toggle("overflow-disabled");
+        }, 2500);
+      /*          STARTING  ANIMATION         */
+
     }
-
-
-    /*      SCROLL ANIMATION     */
-    gsap.timeline({
-        scrollTrigger: {
-          trigger: "#desc",
-          start: "top bottom",
-          end: "top center",
-          scrub: true,
-        } 
-      })
-
-    .to(title, {fontSize: 50, top: 0}, 0)
-    .to(arrow, {bottom: -300}, 0)
-    .to(afterHeader, {cssRule: {top: -3}}, 0)
-    .to(beforeHeader, {cssRule: {top: 0}}, 0)
-    /*      SCROLL ANIMATION     */
-
-
-
-    /*          STARTING  ANIMATION         */
-      let tl = gsap.timeline({
-        defaults: {
-            ease: Power4.easeInOut,
-            duration: 2
-          }
-      })
-
-
-      tl.from(title, 2, {top: 0 - parseInt(getComputedStyle(title).height)})
-      tl.from(arrow, 1, {bottom: -100}, "+1")
-  
-      particula.forEach(part => {
-        let speed = parseFloat(part.dataset.speed)
-        tl.from(part, .7+speed, {top: -150}, "+1")
-      });
-
-      setTimeout(() => {
-        //document.querySelector("body").style.overflowY = "auto"
-        document.querySelector("body").classList.toggle("overflow-disabled");
-      }, 2500);
-    /*          STARTING  ANIMATION         */
-
-    })
+    }, [])
 
 
 
