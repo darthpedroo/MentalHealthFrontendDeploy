@@ -15,7 +15,12 @@
 }
 
 .subtitle {
-    color: var(--clr-grey)
+    color: var(--clr-grey);
+    text-align: center;
+}
+
+.title {
+  text-align: center;
 }
 
 
