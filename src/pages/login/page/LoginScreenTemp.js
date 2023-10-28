@@ -38,6 +38,7 @@ const LoginForm = () => {
         let textButtonVar = document.querySelector(".text-container a")
         let formBoxVar = document.querySelector(".form-box")
         let emailInputContVar = document.querySelector(".email-input .input-text")
+        let inputSectionVar = document.querySelector(".form-box .input-container")
 
         return {
             inputContainer: inputContainerVar,
@@ -50,6 +51,7 @@ const LoginForm = () => {
             textButton: textButtonVar,
             formBox: formBoxVar,
             inputEmail: emailInputContVar,
+            inputSection: inputSectionVar,
         }
     }
 
@@ -57,6 +59,8 @@ const LoginForm = () => {
         data["passwordInput"].classList.remove("register-password")
         data["emailInput"].classList.remove("register-email")
         data["inputEmail"].disabled = true
+        data["textContainer"].classList.remove("register-on")
+        data["inputSection"].classList.remove("input-container-register")
 
         titleChange("SIGN IN", data["titleContainer"], data["titleText"])
 
@@ -77,6 +81,8 @@ const LoginForm = () => {
         data["passwordInput"].classList.add("register-password")
         data["emailInput"].classList.add("register-email")
         data["inputEmail"].disabled = false
+        data["textContainer"].classList.add("register-on")
+        data["inputSection"].classList.add("input-container-register")
 
         titleChange("SIGN UP", data["titleContainer"], data["titleText"])
 

@@ -42,7 +42,7 @@ function MainScreen() {
             } 
           })
   
-        .to(title, {fontSize: 40, top: 0}, 0)
+        .to(title, {fontSize: 40, top: 5}, 0)
         .to(arrow, {bottom: -300}, 0)
         .to(afterHeader, {cssRule: {top: -3}}, 0)
         .to(beforeHeader, {cssRule: {top: 0}}, 0)
