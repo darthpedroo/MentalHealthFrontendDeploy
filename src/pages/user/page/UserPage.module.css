@@ -147,9 +147,13 @@
 }
 
 .profile_username {
+    width: 100%;
+
     position: absolute;
     bottom: -50%;
     left: 3%;
+
+    overflow: hidden;
 }
 
 .container {
@@ -160,6 +164,9 @@
 
 .username {
     font-size: 38px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .picture_container {
@@ -169,6 +176,8 @@
     background-color: var(--user-primary);
     border-radius: 50%;
     border: 5px solid var(--global-background);
+
+    flex-shrink: 0;
 }
 
 .images_container {position: relative;}

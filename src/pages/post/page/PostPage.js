@@ -67,6 +67,8 @@ const Blog = () => {
       
       <SinglePost details={details} comments={comments} likesProps={likes} />
 
+      <div className={style.postpage_footer}></div>
+
       <ShowProfile showBlog={true}></ShowProfile>
   
       

@@ -56,6 +56,8 @@ const Blog = () => {
        <PostButton  header={"Logeate para crear un post"} subtitle={"Click para logearte"} link={"login"}></PostButton>}
 
       <EveryPost details={details} likes={likesData} className='everyPost' />
+
+      <div className="blog-footer"></div>
       <ShowProfile details={details}></ShowProfile>
     </div>
   );

@@ -16,7 +16,8 @@ const CommentsFromPosT = ({comments}) => {
 
 
   return (
-    <div id={style.all_coments_container}>
+    
+    <div className={filteredData.length !== 0 ? (style.all_coments_container) : (style.container_empty)}>
             {filteredData.map((comment, index) => (
                 <div key={index} className={style.comment_container}>
 

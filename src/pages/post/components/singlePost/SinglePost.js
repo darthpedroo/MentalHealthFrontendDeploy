@@ -208,10 +208,10 @@ const SinglePost = ({ details, comments, likesProps }) => {
             placeholder='Hace click para comentar...'
             className={style.form_input}
           ></textarea>
-
-          <button className={style.form_button} onClick={handleInput}>Publicar</button>
           
         </div>
+
+        <button className={style.form_button} onClick={handleInput}>Publicar</button>
 
       </form>
 
@@ -270,6 +270,7 @@ const SinglePost = ({ details, comments, likesProps }) => {
           )}
 
         </div>
+
       )
     }
 

@@ -28,9 +28,9 @@ export const AuthProvider = ({children}) => { //Children Wrapea a todos los comp
         let errorText = document.getElementsByClassName("error-text")[0]
         errorText.innerHTML = errorMessage
 
-        errorCont.style.bottom = "25px"
+        errorCont.style.bottom = "70px"
         setTimeout(() => {
-            errorCont.style.bottom = "0"
+            errorCont.style.bottom = "10px"
             inputsCont.forEach(inputCont => {
                 inputCont.classList.remove("red-border")
             })

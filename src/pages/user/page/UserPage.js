@@ -461,8 +461,8 @@ return (
 
         <div className={userStyle.post_background}>
         
-          <EveryPost details={userPosts} likes ={1} className={userStyle.post_container}> </EveryPost>
-
+          {userPosts.length === 0 ? null : (<EveryPost details={userPosts} likes ={1} className={userStyle.post_container}> </EveryPost>)}
+          
         </div>
 
       </div>

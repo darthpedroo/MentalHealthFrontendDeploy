@@ -81,7 +81,7 @@
     --post-comment-input: #303030;
     --post-comment-button: #6B6B6B;
     --post-comment-button-text: var(--clr-white);
-    --post-comment-button-shadow: rgb(0, 0, 0);
+    --post-comment-button-shadow: rgba(0, 0, 0, 0.635);
     --post-comment-button-hover: #505050;
     /* PostScreen STRUCTURES */
 
