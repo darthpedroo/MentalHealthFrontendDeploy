@@ -16,15 +16,18 @@
 
 .post_section {
   margin-top: 15px;
-  padding: 0 20px;
+  padding-left: 20px;
 }
 
 .post_title {
     font-size: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .post_text {
-  font-size: 25px;
+  font-size: 25px; 
+  margin-top: 10px;
 }
 
 .post_buttons {
@@ -131,4 +134,36 @@
   background-color: var(--post-comment-button-hover);
 
   cursor: pointer;
+}
+
+.form_logout_message {
+  padding: 0;
+
+  text-align: center;
+  padding-top: calc(4rem - 17px);
+}
+
+
+
+@media (max-width: 500px) {
+
+  .singlepost {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .post_title {
+    font-size: 35px;
+  }
+
+  .comment_section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .post_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
 }

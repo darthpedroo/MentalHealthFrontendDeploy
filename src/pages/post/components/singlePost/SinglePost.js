@@ -248,17 +248,13 @@ const SinglePost = ({ details, comments, likesProps }) => {
               
     <form onSubmit={handleCommentSubmit} className={style.comment_form}>
 
-        <div className={style.input_container}>
-
-          <div className={style.profile_container}>
-            <ProfilePicture data={user ? user.user_id : ""}></ProfilePicture>
-          </div>
+        <div className={`${style.input_container} ${style.input_logout_message}`}>
 
           <textarea disabled
             type="text"
             name="text"
-            placeholder='Logeate Para comentar'
-            className={style.form_input}
+            placeholder='Logeate para comentar'
+            className={`${style.form_input} ${style.form_logout_message}`}
           ></textarea>
 
           
