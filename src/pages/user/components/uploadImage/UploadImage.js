@@ -183,7 +183,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
                 />
               </button>
               
-              <button onClick={handleImageSubmit} disabled={!gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen de perfil</button>
+              <button onClick={handleImageSubmit} disabled={!gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen</button>
 
             </div>
       
@@ -225,7 +225,7 @@ const UploadImage = ({data, imageType, closeFunction}) => {
                 className={uploadStyle.banner_input}></input>
               </button>
               
-              <button onClick={handleImageSubmit} disabled={!gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen del banner</button>
+              <button onClick={handleImageSubmit} disabled={!gotResponse} className={`${uploadStyle.upload_button} ${uploadStyle.button} ${gotResponse ? uploadStyle.greenBackground : uploadStyle.grayBackground}`}>Confirmar nueva imagen</button>
 
             </div>
       
