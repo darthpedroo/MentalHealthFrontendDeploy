@@ -9,7 +9,7 @@
     background-color: var(--global-background);
     width: 100vw;
     max-width:100%;  /* this fixs horizontal scrolling */
-    min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
 
@@ -30,7 +30,7 @@
 .sidebar {
     width: 30%;
     max-width: 400px;
-    height: 100vh;
+    height: 100dvh;
 
     position: relative;
 }
@@ -461,6 +461,8 @@
 
         background-color: var(--user-mobile-bg);
         border-top: 2px solid var(--user-mobile-border);
+        
+        z-index: 100;
     }
 
     .mobile_list {
