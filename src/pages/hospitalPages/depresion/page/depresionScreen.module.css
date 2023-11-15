@@ -61,7 +61,7 @@
     z-index: 1;
 }
 
-.container ul li, .container p{
+.container ul li, .container p {
     font-size: calc(.5em + .5vw);
     margin: calc(.25em + .25vh);
     line-height: 25px;
@@ -92,6 +92,8 @@
     font-size: calc(1em + 1vw);
     background-color: transparent;
     z-index: 1;
+    text-align: center;
+    padding: 0 5px;
 }
 
 @media (max-width: 1000px){
