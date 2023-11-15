@@ -18,12 +18,15 @@ const LoginForm = () => {
         }, 1000);
     }
 
-    function textContainerChange(newText, newTextButton, textContainer, text, textButton) {
-        textContainer.classList.add("animation-out")
+    function textContainerChange(newText, newTextButton, textContainer, text, textButton, buttonContainer) {
+
+        let offset_y = Math.abs(buttonContainer.getBoundingClientRect().y - textContainer.getBoundingClientRect().y)
+
+        textContainer.style.transform = `translateY(${offset_y + 10}px)`
         setTimeout(() => {
             text.innerHTML = newText
             textButton.innerHTML = newTextButton
-            textContainer.classList.remove("animation-out")
+            textContainer.style.transform = `translateY(0)`
         }, 1000);
     }
 
@@ -39,6 +42,7 @@ const LoginForm = () => {
         let formBoxVar = document.querySelector(".form-box")
         let emailInputContVar = document.querySelector(".email-input .input-text")
         let inputSectionVar = document.querySelector(".form-box .input-container")
+        let buttonContainerVar = document.querySelector(".button-container")
 
         return {
             inputContainer: inputContainerVar,
@@ -52,6 +56,7 @@ const LoginForm = () => {
             formBox: formBoxVar,
             inputEmail: emailInputContVar,
             inputSection: inputSectionVar,
+            buttonContainer: buttonContainerVar,
         }
     }
 
@@ -64,7 +69,7 @@ const LoginForm = () => {
 
         titleChange("SIGN IN", data["titleContainer"], data["titleText"])
 
-        textContainerChange("¿No tienes una cuenta?", "Crear Una", data["textContainer"], data["text"], data["textButton"])
+        textContainerChange("¿No tienes una cuenta?", "Crear Una", data["textContainer"], data["text"], data["textButton"], data["buttonContainer"])
 
         setTimeout(() => { /* elimina el texto de email-input */
             let inputEmail = document.querySelector(".email-input .input-text")
@@ -86,7 +91,7 @@ const LoginForm = () => {
 
         titleChange("SIGN UP", data["titleContainer"], data["titleText"])
 
-        textContainerChange("¿Ya tienes una cuenta?", "Iniciar Sesion", data["textContainer"], data["text"], data["textButton"])
+        textContainerChange("¿Ya tienes una cuenta?", "Iniciar Sesion", data["textContainer"], data["text"], data["textButton"], data["buttonContainer"])
 
         data["formBox"].dataset.state = "register"
     }

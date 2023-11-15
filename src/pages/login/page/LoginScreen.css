@@ -47,6 +47,7 @@
     /*justify-content: center;*/
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .form-box .form-title {
@@ -157,6 +158,7 @@
 
 .input-container .password-input-container {
     width: 100%;
+    gap: 30px;
 
     display: flex;
     flex-direction: column;
@@ -184,10 +186,10 @@
 
 .password-input-container .text-container {
     position: relative;
-    top: 25px;
+    top: 0px;
 
     transition: top 1s ease .2s,
-    transform .8s;
+    transform 1.2s;
 
     display: flex;
     flex-direction: column;
@@ -228,12 +230,6 @@
     font-weight: 100;
     font-size: 20px;
 }
-
-.form-box .button-container {
-    position: absolute;
-    bottom: 0;
-}
-
 
 .form-box .button-container {
     width: 45%;
@@ -294,10 +290,6 @@
 
 .form-box .title-animation {
     bottom: 20%;
-}
-
-.password-input-container .animation-out {
-    top: 150%
 }
 
 /* REGISTER ANIMATION.  CLASSES ADDED BY JAVASCRIPT */
@@ -365,11 +357,6 @@
 
     .form-box .button-container {
         width: 80%;
-        bottom: 18px
-    }
-
-    .form-box .error-container {
-        bottom: 10px;
     }
 
     .form-box .form-title {
@@ -402,13 +389,9 @@
     .form-box .title-animation {
         bottom: 20%;
     }
-    
-    .password-input-container .animation-out {
-        top: 125%
-    }
 
     .password-input-container .register-on {
-        transform: translateY(60px);
+        top: 60px;
     }
 
     .form-box .input-container-register {
@@ -420,5 +403,23 @@
     .title-container .title {
         font-size: 50px;
         letter-spacing: 2px;
+    }
+}
+
+@media (max-height: 700px) {
+
+    .login-container .title-container {
+        height: 7%;
+        position: absolute;
+        top: -7%;
+    }
+
+    .login-container .form-container {
+        height: 93%;
+    }
+
+    #LoginScreen .login-container {
+        transform: translateY(0);
+        height: 90%;
     }
 }
