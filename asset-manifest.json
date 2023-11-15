@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MentalHealthFrontendDeploy/static/css/main.36bf0048.css",
-    "main.js": "/MentalHealthFrontendDeploy/static/js/main.2bbee644.js",
+    "main.css": "/MentalHealthFrontendDeploy/static/css/main.a53666fc.css",
+    "main.js": "/MentalHealthFrontendDeploy/static/js/main.a498c52c.js",
     "static/media/minecraft1.gif": "/MentalHealthFrontendDeploy/static/media/minecraft1.f8a0388234b35f10fb7b.gif",
     "static/media/minecraft2.gif": "/MentalHealthFrontendDeploy/static/media/minecraft2.d421e2b5dcd61c4b1569.gif",
     "static/media/minecraft3.gif": "/MentalHealthFrontendDeploy/static/media/minecraft3.bb6c3913d545d394a4c5.gif",
@@ -27,11 +27,11 @@
     "static/media/user.png": "/MentalHealthFrontendDeploy/static/media/user.b4731f83f98d2f247edd.png",
     "static/media/loading.png": "/MentalHealthFrontendDeploy/static/media/loading.b0cf5b3b4d6aab355b28.png",
     "index.html": "/MentalHealthFrontendDeploy/index.html",
-    "main.36bf0048.css.map": "/MentalHealthFrontendDeploy/static/css/main.36bf0048.css.map",
-    "main.2bbee644.js.map": "/MentalHealthFrontendDeploy/static/js/main.2bbee644.js.map"
+    "main.a53666fc.css.map": "/MentalHealthFrontendDeploy/static/css/main.a53666fc.css.map",
+    "main.a498c52c.js.map": "/MentalHealthFrontendDeploy/static/js/main.a498c52c.js.map"
   },
   "entrypoints": [
-    "static/css/main.36bf0048.css",
-    "static/js/main.2bbee644.js"
+    "static/css/main.a53666fc.css",
+    "static/js/main.a498c52c.js"
   ]
 }
