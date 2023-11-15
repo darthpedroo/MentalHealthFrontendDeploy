@@ -12,7 +12,6 @@ import CreatePost from './pages/submit/page/CreatePost';
 import LoginScreen from './pages/login/page/LoginScreenTemp';
 import PrivateRoute from './components/utils/PrivateRoute'
 import UserPage from './pages/user/page/UserPage';
-import Register from './pages/register/page/Register';
 import HospitalScreen from './pages/hospitalPages/hospital/page/hospitalScreen';
 import Phrases from './pages/phrases/phrases';
 import AnsiedadScreen from './pages/hospitalPages/ansiedad/page/ansiedadScreen'
@@ -46,7 +45,6 @@ class App extends React.Component {
     
     <Route path ="/profile/:id" element = {<UserPage></UserPage>} ></Route>
     <Route path = "/login" element = {<LoginScreen></LoginScreen>}> </Route>
-    <Route path = "/register" element = {<Register></Register>}></Route>
   </Routes>
 
   </AuthProvider>
